@@ -7,6 +7,13 @@ namespace TypingBC.DataAccess
 {
     public class CPersistantData
     {
+        private const string TABLEFILE_EXERCISESET = "Data/XML/tbExerciseSet.xml";
+        private const string TABLEFILE_EXERCISE = "Data/XML/tbExercise.xml";
+        private const string TABLEFILE_CONFIG = "Data/XML/tbConfig.xml";
+        private const string TABLEFILE_PRACTICEDATA = "Data/XML/tbPracticeData.xml";
+        private const string TABLEFILE_SPEECH = "Data/XML/tbSpeech.xml";
+        private const string TABLEFILE_USER = "Data/XML/tbUser.xml";
+
         public CExerciseSet[] LoadExSetList()
         {
             //TODO: load from database
