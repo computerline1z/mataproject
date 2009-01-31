@@ -8,7 +8,7 @@ namespace TypingBC.Business
     {
         private string m_sUserName;
         private DateTime m_tPraticeTime;
-        private float m_fErrorRate, m_fAverageTime, m_fUsingHelpTime;
+        private long m_lExerciseCount, m_lKeyCount, m_lFailKeyCount, m_lUsingHelpCount, m_lTotalTime;
 
         public string UserName
         {
@@ -23,31 +23,66 @@ namespace TypingBC.Business
         }
 
         /// <summary>
-        /// tỉ lệ lỗi: số phím sai / tổng số phím đã gõ (??)
+        /// Số bài tập đã tập trong lần này
+        /// </summary>
+        public long ExerciseCount
+        {
+            get { return m_lExerciseCount; }
+            set { m_lExerciseCount = value; }
+        }
+
+        /// <summary>
+        /// tổng số phím đã gõ
+        /// </summary>
+        public long KeyCount
+        {
+            get { return m_lKeyCount; }
+            set { m_lKeyCount = value; }
+        }
+
+        /// <summary>
+        /// Ttổng sô phím sai đã gõ
+        /// </summary>
+        public long FailKeyCount
+        {
+            get { return m_lFailKeyCount; }
+            set { m_lFailKeyCount = value; }
+        }
+
+        /// <summary>
+        /// Tổng sô lần dùng help
+        /// </summary>
+        public long UsingHelpCount
+        {
+            get { return m_lUsingHelpCount; }
+            set { m_lUsingHelpCount = value; }
+        }
+
+        /// <summary>
+        /// Tổng thời gian của lần tập này.
+        /// </summary>
+        public long TotalTime
+        {
+            get { return m_lTotalTime; }
+            set { m_lTotalTime = value; }
+        }
+
+        /// <summary>
+        /// các hàm sau có thể viết tùy ý, muốn tính gì thì tính. Nhưng nhớ check lỗi devision by zero :|
         /// </summary>
         public float ErrorRate
         {
-            get { return m_fErrorRate; }
-            set { m_fErrorRate = value; }
+            get { return (float)(m_lFailKeyCount * 1.0 / m_lKeyCount); }
         }
 
-        /// <summary>
-        /// thời gian trung bình cho 1 phím: tổng thời gian (giây) / tổng số phím đã gõ.
-        /// </summary>
-        public float AverageTime
+        public float TimePerKey
         {
-            get { return m_fAverageTime; }
-            set { m_fAverageTime = value; }
+            get { return (float)(m_lTotalTime * 1.0 / m_lKeyCount); }
         }
 
-        /// <summary>
-        /// TODO: cái này tính sao đây???
-        /// Chẳng lẽ: số lần giúp đỡ/số bài tập đã làm?
-        /// </summary>
-        public float UsingHelpTime
+        public float TimePerExercise
         {
-            get { return m_fUsingHelpTime; }
-            set { m_fUsingHelpTime = value; }
+            get { return (float)(m_lTotalTime * 1.0 / m_lExerciseCount); }
         }
 
         public CPracticeData()

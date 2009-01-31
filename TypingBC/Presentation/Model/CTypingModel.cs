@@ -26,21 +26,6 @@ namespace TypingBC.Presentation.Model
             get { return m_usingExSet; }
         }
 
-        public TypingMode UsingTypingMode
-        {
-            get
-            {
-                return m_configManager.UsingTypingMode;
-            }
-            set
-            {
-                if (m_configManager.UsingTypingMode != value)
-                {
-                    m_configManager.UsingTypingMode = value;
-                }
-            }
-        }
-
         public CUser UserManager
         {
             get { return m_userManager; }
@@ -72,7 +57,7 @@ namespace TypingBC.Presentation.Model
         /// <returns></returns>
         public int GetExSetInstruction(bool bBegin)
         {
-            return m_dataManager.GetExSetInstruction(bBegin, m_usingExerciseSet);
+            return m_dataManager.GetExSetInstruction(bBegin, m_usingExSet);
         }
 
         /// <summary>

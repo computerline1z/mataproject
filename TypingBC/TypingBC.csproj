@@ -76,6 +76,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\TypingBC_data.mdb">
+    </Content>
     <Content Include="Data\XML\tbConfig.xml" />
     <Content Include="Data\XML\tbExercise.xml" />
     <Content Include="Data\XML\tbExerciseSet.xml" />
