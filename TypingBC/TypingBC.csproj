@@ -65,6 +65,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Data\Typing_DB.vsd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,8 +77,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\TypingBC_data.mdb">
-    </Content>
+    <None Include="Data\TypingBC_data.mdb" />
     <Content Include="Data\XML\tbConfig.xml" />
     <Content Include="Data\XML\tbExercise.xml" />
     <Content Include="Data\XML\tbExerciseSet.xml" />
