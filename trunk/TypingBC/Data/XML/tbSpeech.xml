@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:57">
+<tbSpeech>
+<ID>0</ID>
+<HelpString>Help string 01</HelpString>
+<WavFile>WavFile 01</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>1</ID>
+<HelpString>Help string 02</HelpString>
+<WavFile>Wav File 02</WavFile>
+</tbSpeech>
+</dataroot>
