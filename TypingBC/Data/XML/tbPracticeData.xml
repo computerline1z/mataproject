@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:50">
+<tbPracticeData>
+<ID>1</ID>
+<UserName>test01</UserName>
+<Time>2009-01-31T00:00:00</Time>
+<ErrorRate>0,5</ErrorRate>
+<UsingHelpRate>3</UsingHelpRate>
+<AverageTime>120</AverageTime>
+</tbPracticeData>
+<tbPracticeData>
+<ID>2</ID>
+<UserName>test01</UserName>
+<Time>2009-01-24T00:00:00</Time>
+<ErrorRate>0,4</ErrorRate>
+<UsingHelpRate>3</UsingHelpRate>
+<AverageTime>200</AverageTime>
+</tbPracticeData>
+<tbPracticeData>
+<ID>3</ID>
+<UserName>test02</UserName>
+<Time>2009-01-07T00:00:00</Time>
+<ErrorRate>0,4</ErrorRate>
+<UsingHelpRate>2</UsingHelpRate>
+<AverageTime>100</AverageTime>
+</tbPracticeData>
+</dataroot>
