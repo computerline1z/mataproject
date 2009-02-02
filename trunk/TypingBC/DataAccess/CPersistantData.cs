@@ -22,9 +22,9 @@ namespace TypingBC.DataAccess
 
         private DataTable ReadDataFile(string sFile)
         {
-            DataTable dtTable = new DataTable();
-            dtTable.ReadXml(CurrentPath + sFile);
-            return dtTable;
+            DataSet dtSet = new DataSet();
+            dtSet.ReadXml(CurrentPath + sFile);
+            return dtSet.Tables[1];
         }
 
         public string CurrentPath
@@ -70,7 +70,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select(string.Format("ExSetID = %i", type));
+                DataRow[] arrRows = m_dtExercise.Select("ExSetID = " + type);
 
                 List<CExercise> lsRet = new List<CExercise>();
 
@@ -163,13 +163,14 @@ namespace TypingBC.DataAccess
 
         public bool IsUserExisted(string sNick)
         {
-            try
-            {
-                DataRow[] arrRows = m_dtUser.Select(string.Format("UserName = '%s'", sNick.Trim().ToLower()));
+            //try
+            //{
+            string s = string.Format("UserName like '{0}'", sNick.Trim().Replace("'", "''"));
+                DataRow[] arrRows = m_dtUser.Select(s);
                 return (arrRows != null && arrRows.Length > 0);
-            }
-            catch {}
-            return true;
+            //}
+            //catch {}
+            //return true;
         }
 
         public string[] LoadUser()
@@ -179,7 +180,7 @@ namespace TypingBC.DataAccess
                 List<string> lsRet = new List<string>();
                 foreach (DataRow dtRow in m_dtUser.Rows)
                 {
-                    lsRet.Add(dtRow[0]);
+                    lsRet.Add((string)dtRow[0]);
                 }
                 return lsRet.ToArray();
             }
@@ -202,6 +203,16 @@ namespace TypingBC.DataAccess
         public void SaveConfig(int BlindRepeatTime)
         {
             //TODO: save lai config
+        }
+
+        public CPersistantData()
+        {
+            m_dtUser = ReadDataFile(TABLEFILE_USER);
+            m_dtUser.CaseSensitive = false;
+            m_dtExercise = ReadDataFile(TABLEFILE_EXERCISE);
+            m_dtExercise.CaseSensitive = false;
+            m_dtExSet = ReadDataFile(TABLEFILE_EXERCISESET);
+            m_dtExSet.CaseSensitive = false;
         }
     }
 }
