@@ -4,6 +4,7 @@ using System.Text;
 using TypingBC.Presentation;
 using System.Data;
 using System.IO;
+using TypingBC.Business;
 
 namespace TypingBC.DataAccess
 {
@@ -163,14 +164,9 @@ namespace TypingBC.DataAccess
 
         public bool IsUserExisted(string sNick)
         {
-            //try
-            //{
             string s = string.Format("UserName like '{0}'", sNick.Trim().Replace("'", "''"));
-                DataRow[] arrRows = m_dtUser.Select(s);
-                return (arrRows != null && arrRows.Length > 0);
-            //}
-            //catch {}
-            //return true;
+            DataRow[] arrRows = m_dtUser.Select(s);
+            return (arrRows != null && arrRows.Length > 0);
         }
 
         public string[] LoadUser()
@@ -188,7 +184,7 @@ namespace TypingBC.DataAccess
             return null;
         }
 
-        public bool UpdateUser(string user)
+        public bool UpdateUserName(string UserName)
         {
             //TODO: add code
             return true;
@@ -213,6 +209,42 @@ namespace TypingBC.DataAccess
             m_dtExercise.CaseSensitive = false;
             m_dtExSet = ReadDataFile(TABLEFILE_EXERCISESET);
             m_dtExSet.CaseSensitive = false;
+        }
+
+        public bool UpdatePracData(CPracticeData data)
+        {
+            //TODO: add code
+            return false;
+        }
+
+        public bool UpdateUserTypingMode(string UserName, int mode)
+        {
+            //TODO: add code
+            return false;
+        }
+
+        public int LoadUserTypingMode(string UserName)
+        {
+            //TODO: add code
+            return 0;
+        }
+
+        public bool LoadUsingExID(string UserName, int id)
+        {
+            //TODO: add code
+            return false;
+        }
+
+        public int LoadUsingExID(string UserName)
+        {
+            //TODO: add code
+            return 0;
+        }
+
+        public CPracticeData[] LoadPracData(string UserName)
+        {
+            //TODO: add code
+            return null;
         }
     }
 }

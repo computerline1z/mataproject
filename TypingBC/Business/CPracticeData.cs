@@ -6,14 +6,17 @@ namespace TypingBC.Business
 {
     public class CPracticeData
     {
+        #region ========================= private members ===========
+
         private string m_sUserName;
         private DateTime m_tPraticeTime;
         private long m_lExerciseCount, m_lKeyCount, m_lFailKeyCount, m_lUsingHelpCount, m_lTotalTime;
 
+        #endregion
+
         public string UserName
         {
             get { return m_sUserName; }
-            set { m_sUserName = value; }
         }
 
         public DateTime PraticeTime
@@ -85,9 +88,9 @@ namespace TypingBC.Business
             get { return (float)(m_lTotalTime * 1.0 / m_lExerciseCount); }
         }
 
-        public CPracticeData()
+        public CPracticeData(string userName)
         {
-
+            this.m_sUserName = userName;
         }
     }
 }

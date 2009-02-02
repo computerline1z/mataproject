@@ -7,26 +7,6 @@ using TypingBC.DataAccess;
 namespace TypingBC.Business
 {
     /// <summary>
-    /// dùng tìm kiếm user
-    /// </summary>
-    sealed class CompUser
-    {
-        private string m_sName = null;
-
-        public string Name
-        {
-            set { m_sName = value; }
-        }
-
-        public bool cmp(string user)
-        {
-            if (m_sName.CompareTo(user) == 0)
-                return true;
-            return false; 
-        }
-    }
-
-    /// <summary>
     /// lớp này có nhiệm vụ trợ giúp tầng Presentation thực hiện một số việc liên quan đến User
     /// View không nên dùng trực tiếp lớp này, mà nên dùng thông qua <see cref="CTypingModel.UserManager"/>
     /// để đảm bảo logic ^^.
@@ -36,24 +16,16 @@ namespace TypingBC.Business
         #region ========================= private members ===========
 
         private CPersistantData m_dataManager;
-        private CompUser m_cmpUser;
 
         #endregion
 
         public CUser(CPersistantData dataManager)
         {
             this.m_dataManager = dataManager;
-            this.m_cmpUser = new CompUser(); 
         }
 
         public bool IsUserExisted(string sUserName)
         {
-//             m_cmpUser.Name = sUserName;
-//             string[] listUser = m_dataManager.LoadUser();
-// 
-//             if (listUser == null)
-//                 return false;
-//             return Array.Exists<string>(listUser, m_cmpUser.cmp);
             return m_dataManager.IsUserExisted(sUserName);
         }
 
@@ -62,45 +34,48 @@ namespace TypingBC.Business
             if(!IsUserExisted(sUserName))
             {
                 //TODO: add vào Database
-                return m_dataManager.UpdateUser(sUserName);
+                return m_dataManager.UpdateUserName(sUserName);
             }
             return false;
         }
 
         public bool AppendPracticeData(CPracticeData data)
         {
-            // TODO: add code.
-            return false;
+            // TODO: add code
+            return m_dataManager.UpdatePracData(data);
         }
 
         public CPracticeData[] GetPracticeData(string sUserName)
         {
             //TODO: add code
-            return null;
+            return m_dataManager.LoadPracData(sUserName);
         }
 
         public int GetUsingExercise(string sUserName)
         {
             //TODO: add code
-            return 0;
+            return m_dataManager.LoadUsingExID(sUserName);
         }
 
         public bool SetUsingExercise(string sUserName, int iUsing)
         {
             // TODO: add code
-            return false;
+            return m_dataManager.LoadUsingExID(sUserName, iUsing);
         }
 
         public TypingMode GetUsingTypingMode(string sUserName)
         {
             //TODO: add code
+            int idTypingMode = m_dataManager.LoadUserTypingMode(sUserName);
+            if (idTypingMode == 0)
+                return TypingMode.BRAILLE;
             return TypingMode.NORMAL;
         }
 
         public bool SetUsingTypingMode(string sUserName, TypingMode mode)
         {
             //TODO: add code
-            return false;
+            return m_dataManager.UpdateUserTypingMode(sUserName, (int)mode);
         }
     }
 }
