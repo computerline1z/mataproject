@@ -54,5 +54,16 @@ namespace TypingBC.DataAccess
             //TODO: add code
             return true;
         }
+
+        public int LoadConfig()
+        {
+            //TODO: load len blind time
+            return 1;
+        }
+
+        public void SaveConfig(int BlindRepeatTime)
+        {
+            //TODO: save lai config
+        }
     }
 }

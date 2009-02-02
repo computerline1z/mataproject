@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 using TypingBC.Presentation;
+using TypingBC.DataAccess;
 
 namespace TypingBC.Business
 {
     public class CConfig
     {
         private int m_iBlindRepeatTime;
+        private CPersistantData m_dataManager;
 
         private void SaveConfig()
         {
             // TODO: save config vào DB
+            this.m_dataManager.SaveConfig(this.m_iBlindRepeatTime);
         }
 
         public int BlindRepeatTime
@@ -25,9 +28,11 @@ namespace TypingBC.Business
         }
 
 
-        public CConfig()
+        public CConfig(CPersistantData dataManager)
         {
             //TODO: đọc config từ Database
+            this.m_dataManager = dataManager;
+            m_iBlindRepeatTime = this.m_dataManager.LoadConfig();
         }
     }
 }
