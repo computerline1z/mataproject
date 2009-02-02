@@ -2,9 +2,30 @@
 using System.Collections.Generic;
 using System.Text;
 using TypingBC.Presentation;
+using TypingBC.DataAccess;
 
 namespace TypingBC.Business
 {
+    /// <summary>
+    /// dùng tìm kiếm user
+    /// </summary>
+    sealed class CompUser
+    {
+        private string m_sName = null;
+
+        public string Name
+        {
+            set { m_sName = value; }
+        }
+
+        public bool cmp(string user)
+        {
+            if (m_sName.CompareTo(user) == 0)
+                return true;
+            return false; 
+        }
+    }
+
     /// <summary>
     /// lớp này có nhiệm vụ trợ giúp tầng Presentation thực hiện một số việc liên quan đến User
     /// View không nên dùng trực tiếp lớp này, mà nên dùng thông qua <see cref="CTypingModel.UserManager"/>
@@ -12,10 +33,28 @@ namespace TypingBC.Business
     /// </summary>
     public class CUser
     {
+        #region ========================= private members ===========
+
+        private CPersistantData m_dataManager;
+        private CompUser m_cmpUser;
+
+        #endregion
+
+        public CUser(CPersistantData dataManager)
+        {
+            this.m_dataManager = dataManager;
+            this.m_cmpUser = new CompUser(); 
+        }
+
         public bool IsUserExisted(string sUserName)
         {
             //TODO: kiểm tra...
-            return false;
+            m_cmpUser.Name = sUserName;
+            string[] listUser = m_dataManager.LoadUser();
+
+            if (listUser == null)
+                return false;
+            return Array.Exists<string>(listUser, m_cmpUser.cmp);
         }
 
         public bool AddUser(string sUserName)
@@ -23,7 +62,7 @@ namespace TypingBC.Business
             if(!IsUserExisted(sUserName))
             {
                 //TODO: add vào Database
-                return true;
+                return m_dataManager.UpdateUser(sUserName);
             }
             return false;
         }
