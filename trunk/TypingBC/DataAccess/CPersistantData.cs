@@ -42,5 +42,17 @@ namespace TypingBC.DataAccess
             //TODO: ex.... = ...
             return ex;
         }
+
+        public string[] LoadUser()
+        {
+            //TODO: load from database
+            return null;
+        }
+
+        public bool UpdateUser(string user)
+        {
+            //TODO: add code
+            return true;
+        }
     }
 }
