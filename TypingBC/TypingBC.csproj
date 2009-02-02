@@ -82,12 +82,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\TypingBC_data.mdb" />
-    <Content Include="Data\XML\tbConfig.xml" />
-    <Content Include="Data\XML\tbExercise.xml" />
-    <Content Include="Data\XML\tbExerciseSet.xml" />
-    <Content Include="Data\XML\tbPracticeData.xml" />
-    <Content Include="Data\XML\tbSpeech.xml" />
-    <Content Include="Data\XML\tbUser.xml" />
+    <Content Include="Data\XML\tbConfig.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\XML\tbExercise.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\XML\tbExerciseSet.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\XML\tbPracticeData.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\XML\tbSpeech.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\XML\tbUser.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\TXT\" />
