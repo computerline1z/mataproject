@@ -27,7 +27,6 @@ namespace TypingBC.Business
             }
         }
 
-
         public CConfig(CPersistantData dataManager)
         {
             //TODO: đọc config từ Database
