@@ -11,7 +11,8 @@ namespace TypingBC.Business
     public static class CConverter
     {
         #region CodeTable
-        private static readonly char[] UnicodeTable = 
+        private static readonly int m_iTableAmount = 36;
+        private static readonly char[] m_arrUnicodeCode = 
         {
             'đ','á','à','ả','ã','ạ',
             'â','ấ','ầ','ẩ','ẫ','ậ',
@@ -21,7 +22,7 @@ namespace TypingBC.Business
             'ư','ứ','ừ','ử','ữ','ự'
         };
 
-        private static readonly string[] VNITable = 
+        private static readonly string[] m_arrVNICode = 
         {
             "d9","a1","a2","a3","a4","a5",
             "a6","a61","a62","a63","a64","a65",
@@ -34,9 +35,27 @@ namespace TypingBC.Business
 
         #endregion
 
+        private static int FindCharInTable(char cChar)
+        {
+            for (int i = 0; i < m_iTableAmount; i++)
+            {
+                if (m_arrUnicodeCode[i] == cChar)
+                    return i;
+            }
+            return -1;
+        }
+
         public static string Str2VNI(string sString)
         {
-
+            string finalString = "";
+            for (int i = 0; i < sString.Length; i++)
+            {
+                int result = FindCharInTable(sString[i]);
+                if (result == -1)
+                    finalString += sString[i];
+                else
+                    finalString += m_arrVNICode[result]; 
+            }
             return string.Empty;
         }
 
