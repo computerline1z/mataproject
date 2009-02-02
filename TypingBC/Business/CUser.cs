@@ -48,13 +48,13 @@ namespace TypingBC.Business
 
         public bool IsUserExisted(string sUserName)
         {
-            //TODO: kiểm tra...
-            m_cmpUser.Name = sUserName;
-            string[] listUser = m_dataManager.LoadUser();
-
-            if (listUser == null)
-                return false;
-            return Array.Exists<string>(listUser, m_cmpUser.cmp);
+//             m_cmpUser.Name = sUserName;
+//             string[] listUser = m_dataManager.LoadUser();
+// 
+//             if (listUser == null)
+//                 return false;
+//             return Array.Exists<string>(listUser, m_cmpUser.cmp);
+            return m_dataManager.IsUserExisted(sUserName);
         }
 
         public bool AddUser(string sUserName)
