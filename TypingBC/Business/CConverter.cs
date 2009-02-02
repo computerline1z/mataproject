@@ -11,7 +11,7 @@ namespace TypingBC.Business
     public static class CConverter
     {
         #region CodeTable
-        private static readonly int m_iTableAmount = 36;
+        private static readonly int m_iTableAmount = 60 - 3;
         private static readonly char[] m_arrUnicodeCode = 
         {
             'đ','á','à','ả','ã','ạ',
@@ -67,12 +67,13 @@ namespace TypingBC.Business
                 "u","u","u","u","u",
             "u","u","u","u","u","u"
         };
-
-
+        
         #endregion
 
         private static int FindCharInTable(char cChar)
         {
+            if (('A' <= cChar && cChar <= 'Z') || ('a' <= cChar && cChar <= 'z'))
+                return -1;
             for (int i = 0; i < m_iTableAmount; i++)
             {
                 if (m_arrUnicodeCode[i] == cChar)
@@ -85,15 +86,9 @@ namespace TypingBC.Business
         {
             string finalString = "";
             int result;
-            char cChar;
             for (int i = 0; i < sString.Length; i++)
             {
-                cChar = sString[i];
-                if (('A' <= cChar && cChar <= 'Z') || ('a' <= cChar && cChar <= 'z'))
-                    result = -1;
-                else
-                    result = FindCharInTable(sString[i]);
-
+                result = FindCharInTable(sString[i]);
                 if (result == -1)
                     finalString += sString[i];
                 else
@@ -104,12 +99,32 @@ namespace TypingBC.Business
 
         public static string Str2Telex(string sString)
         {
-            return string.Empty;
+            string finalString = "";
+            int result;
+            for (int i = 0; i < sString.Length; i++)
+            {
+                result = FindCharInTable(sString[i]);
+                if (result == -1)
+                    finalString += sString[i];
+                else
+                    finalString += m_arrTelexCode[result];
+            }
+            return finalString;
         }
 
         public static string Str2NoMark(string sString)
         {
-            return string.Empty;
+            string finalString = "";
+            int result;
+            for (int i = 0; i < sString.Length; i++)
+            {
+                result = FindCharInTable(sString[i]);
+                if (result == -1)
+                    finalString += sString[i];
+                else
+                    finalString += m_arrNoMarkCode[result];
+            }
+            return finalString;
         }
     }
 }
