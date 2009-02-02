@@ -83,8 +83,8 @@ namespace TypingBC.Presentation.Model
 
         public CTypingModel()
         {
-            m_configManager = new CConfig();
             m_dataManager = new CPersistantData();
+            m_configManager = new CConfig(m_dataManager);
             m_userManager = new CUser(m_dataManager);
             m_usingExercise = null;
         }
