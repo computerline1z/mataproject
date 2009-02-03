@@ -72,7 +72,7 @@ namespace TypingBC.Business
 
         private static int FindCharInTable(char cChar)
         {
-            if (('A' <= cChar && cChar <= 'Z') || ('a' <= cChar && cChar <= 'z'))
+            if ('a' <= cChar && cChar <= 'z')
                 return -1;
             for (int i = 0; i < m_iTableAmount; i++)
             {
@@ -84,45 +84,87 @@ namespace TypingBC.Business
 
         public static string Str2VNI(string sString)
         {
+            char[] arrString = sString.ToCharArray();
             string finalString = "";
             int result;
+            bool isUpper;
             for (int i = 0; i < sString.Length; i++)
             {
-                result = FindCharInTable(sString[i]);
-                if (result == -1)
-                    finalString += sString[i];
+                isUpper = false;
+                if (Char.IsUpper(arrString[i]))
+                {
+                    result = FindCharInTable(Char.ToLower(arrString[i]));
+                    isUpper = true;
+                }
                 else
-                    finalString += m_arrVNICode[result]; 
+                    result = FindCharInTable(arrString[i]);
+                if (result == -1)
+                    finalString += arrString[i];
+                else
+                {
+                    char[] temp = m_arrVNICode[result].ToCharArray();
+                    if (isUpper == true)
+                        temp[0] = Char.ToUpper(temp[0]);
+                    finalString += new string(temp);
+                }
             }
             return finalString;
         }
 
         public static string Str2Telex(string sString)
         {
+            char[] arrString = sString.ToCharArray();
             string finalString = "";
             int result;
+            bool isUpper;
             for (int i = 0; i < sString.Length; i++)
             {
-                result = FindCharInTable(sString[i]);
-                if (result == -1)
-                    finalString += sString[i];
+                isUpper = false;
+                if (Char.IsUpper(arrString[i]))
+                {
+                    result = FindCharInTable(Char.ToLower(arrString[i]));
+                    isUpper = true;
+                }
                 else
-                    finalString += m_arrTelexCode[result];
+                    result = FindCharInTable(arrString[i]);
+                if (result == -1)
+                    finalString += arrString[i];
+                else
+                {
+                    char[] temp = m_arrTelexCode[result].ToCharArray();
+                    if (isUpper == true)
+                        temp[0] = Char.ToUpper(temp[0]);
+                    finalString += new string(temp);
+                }
             }
             return finalString;
         }
 
         public static string Str2NoMark(string sString)
         {
+            char[] arrString = sString.ToCharArray();
             string finalString = "";
             int result;
+            bool isUpper;
             for (int i = 0; i < sString.Length; i++)
             {
-                result = FindCharInTable(sString[i]);
-                if (result == -1)
-                    finalString += sString[i];
+                isUpper = false;
+                if (Char.IsUpper(arrString[i]))
+                {
+                    result = FindCharInTable(Char.ToLower(arrString[i]));
+                    isUpper = true;
+                }
                 else
-                    finalString += m_arrNoMarkCode[result];
+                    result = FindCharInTable(arrString[i]);
+                if (result == -1)
+                    finalString += arrString[i];
+                else
+                {
+                    char[] temp = m_arrNoMarkCode[result].ToCharArray();
+                    if (isUpper == true)
+                        temp[0] = Char.ToUpper(temp[0]);
+                    finalString += new string(temp);
+                }
             }
             return finalString;
         }
