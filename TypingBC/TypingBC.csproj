@@ -48,17 +48,27 @@
     <Compile Include="Presentation\CExercise.cs" />
     <Compile Include="Presentation\CExerciseSet.cs" />
     <Compile Include="Presentation\Model\CTypingModel.cs" />
-    <Compile Include="Presentation\View\Form1.cs">
+    <Compile Include="Presentation\View\ViewDlg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation\View\ViewDlg.Designer.cs">
+      <DependentUpon>ViewDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\View\UserNameDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\View\UserNameDlg.Designer.cs">
+      <DependentUpon>UserNameDlg.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentation\View\Form1.resx">
+    <EmbeddedResource Include="Presentation\View\ViewDlg.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>ViewDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\View\UserNameDlg.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserNameDlg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
