@@ -110,6 +110,8 @@
     <Content Include="Data\XML\tbUser.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Presentation\View\Icons\Notify.ico" />
+    <Content Include="Presentation\View\Icons\Sound.ico" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\TXT\" />
