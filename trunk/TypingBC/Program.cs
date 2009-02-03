@@ -14,7 +14,7 @@ namespace TypingBC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentation.View.Form1());
+            Application.Run(new Presentation.View.ViewDlg());
         }
     }
 }
