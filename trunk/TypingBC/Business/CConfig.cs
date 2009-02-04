@@ -8,6 +8,7 @@ namespace TypingBC.Business
 {
     public class CConfig
     {
+        public const int iDeltaWidth = 420;
         private int m_iBlindRepeatTime;
         private CPersistantData m_dataManager;
 
