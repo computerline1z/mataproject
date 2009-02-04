@@ -1,23 +1,37 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TypingBC.DataAccess;
+using System.Media;
 
 namespace TypingBC.Business
 {
     public class CSpeech
     {
-        public void ReadString(int iStringID)
+        private static CPersistantData m_Data;
+
+        public static void ReadString(int iStringID)
         {
+            bool isWavFile;
+            string pathFile = m_Data.GetSpeechEntry(iStringID, out isWavFile);
 
+            SoundPlayer player = new SoundPlayer(pathFile);
+            player.Play();
         }
-        public void ReadString(string sString)
+
+        public static void ReadString(string sString)
         {
-
+            
         }
 
-        public void ReadString(char c)
+        static CSpeech()
         {
-
+            m_Data = new CPersistantData();
         }
+
+        //public static void ReadString(char c)
+        //{
+
+        //}
     }
 }

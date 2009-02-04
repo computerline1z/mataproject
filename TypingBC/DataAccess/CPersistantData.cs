@@ -246,5 +246,12 @@ namespace TypingBC.DataAccess
             //TODO: add code
             return null;
         }
+
+        public string GetSpeechEntry(int iStringID, out bool isWavFile)
+        {
+            //TODO: add code
+            isWavFile = false;
+            return string.Empty;
+        }
     }
 }
