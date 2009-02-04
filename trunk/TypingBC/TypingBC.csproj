@@ -92,6 +92,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\TypingBC_data.mdb" />
+    <Content Include="Data\TXT\Help Layer 22.txt" />
+    <Content Include="Data\TXT\Help Layer 1.txt" />
+    <Content Include="Data\TXT\Help Layer 21.txt" />
+    <Content Include="Data\TXT\Help Layer 3.txt" />
     <Content Include="Data\XML\tbConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -114,7 +118,6 @@
     <Content Include="Presentation\View\Icons\Sound.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\TXT\" />
     <Folder Include="Data\WAV\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
