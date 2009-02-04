@@ -66,10 +66,10 @@ namespace TypingBC.Business
                 case 32:            //dấu nặng
                     m_iMark = 4;
                     break;
-                case 44:            //báo số
+                case 60:            //báo số
                     m_bDigit = true;
                     break;
-                case 50:            //báo viết hoa
+                case 40:            //báo viết hoa
                     m_bUpper = true;
                     break;
                 default:
@@ -152,9 +152,12 @@ namespace TypingBC.Business
                 return result;
             }
 
+            //nếu 6 phím truyền vào khác 6 phím đã đăng ký sẽ sai
             //biểu diễn các chấm vào các bit
             foreach (char c in arrKeyPressed)
             {
+                if (!m_arrBrailleKeys.ContainsKey(c))
+                    return result;
                 b |= 0x1 << (m_arrBrailleKeys[c] - 1);
             }
             //xử lý số và các kí hiệu toán học
@@ -195,6 +198,7 @@ namespace TypingBC.Business
 
             return result;
         }
+
         public CBrailleMode()
         {
             //TODO: đọc từ DB vào m_arrBrailleKeys
