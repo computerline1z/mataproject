@@ -92,10 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\TypingBC_data.mdb" />
+    <Content Include="Data\TXT\Help Hot Key.txt" />
     <Content Include="Data\TXT\Help Layer 22.txt" />
     <Content Include="Data\TXT\Help Layer 1.txt" />
     <Content Include="Data\TXT\Help Layer 21.txt" />
     <Content Include="Data\TXT\Help Layer 3.txt" />
+    <Content Include="Data\TXT\Help.txt" />
     <Content Include="Data\XML\tbConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
