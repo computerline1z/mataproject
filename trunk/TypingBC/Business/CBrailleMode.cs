@@ -10,28 +10,38 @@ namespace TypingBC.Business
 
         private Dictionary<char, int> m_arrBrailleKeys;
 
+        //báo viết hoa
         private bool m_bUpper;
+        //báo  in hoa toàn bộ
+        private bool m_bCapsLock;
+        //báo số
         private bool m_bDigit;
+        //báo có thể là kí hiệu toán học
+        private bool m_bMath;
+        //báo dấu
         private int m_iMark;
 
+
+        //dựa trên bảng mã Việt ngữ của mái ấm Thiên Ân, thay chữ d = đ và z = d
+        //các trường hợp chưa thể xử lý: '(', ')', '...', 'z'
         private char[] m_arrAlphabet = 
         {
             'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 
             'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 
             'u', 'v', 'w', 'x', 'y', 'z', 
             'ă', 'â', 'đ', 'ê', 'ô', 'ơ', 'ư',
-            ',', ';', ':', '.', '?', '!', '=', '"', '"', '[', ']', '\\'
+            ',', ';', ':', '.', '?', '!', '"', '"', '/', '\''
         };
-
+        //số tương ứng với cách gõ theo bảng mã trên
         private int[] m_arrIndex = 
         {
-            1, 3, 9, 25, 17, 11, 27, 19, 10, 26, 
+            1, 3, 9, 53, 17, 11, 27, 19, 10, 26, 
             5, 7, 13, 29, 21, 15, 31, 23, 14, 30, 
             37, 39, 58, 45, 61, 53, 
-            28, 33, 46, 35, 57, 42, 51,
-            2, 18, 6, 50, 34, 38, 70, 54, 68, 55, 62, 44
+            28, 33, 25, 35, 57, 42, 51,
+            2, 18, 6, 50, 34, 38, 70, 68, 12, 4
         };
-
+        //bảng các kí tự có dấu
         private char[] m_arrMark =
         {
             'á', 'à', 'ả', 'ã', 'ạ', 'ắ', 'ằ', 'ẳ', 'ẵ', 'ặ',
@@ -70,7 +80,15 @@ namespace TypingBC.Business
                     m_bDigit = true;
                     break;
                 case 40:            //báo viết hoa
-                    m_bUpper = true;
+                    if (!m_bUpper && !m_bCapsLock)
+                        m_bUpper = true;
+                    else if (!m_bCapsLock)
+                        m_bCapsLock = true;
+                    else
+                    {
+                        m_bUpper = false;
+                        m_bCapsLock = false;
+                    }
                     break;
                 default:
                     isSpecial = false;
@@ -126,8 +144,37 @@ namespace TypingBC.Business
             }
         }
 
+        private char SymbolMath(int b)
+        {
+            switch (b)
+            {
+                case 22:
+                    return '+';
+                    break;
+                case 36:
+                    return '-';
+                    break;
+                case 38:
+                    return '*';
+                    break;
+                case 50:
+                    return '/';
+                    break;
+                case 54:
+                    return '=';
+                    break;
+                default:
+                    return '\0';
+                    break;
+            }
+        }
+
         #endregion
 
+        /// <summary>
+        /// thiết lập 6 phím làm tổ hợp phím nhấn
+        /// </summary>
+        /// <param name="arrKeys">mảng các kí tự ứng với các phím sẽ thiết lập</param>
         public void SetBrailleKeys(char[] arrKeys)
         {
             //lưu lại tất cả các phím đã set, thay đổi giá trị nếu phím đã được set
@@ -140,6 +187,11 @@ namespace TypingBC.Business
             }
         }
 
+        /// <summary>
+        /// chuyển tổ hợp 6 phím nhấn thành kí tự
+        /// </summary>
+        /// <param name="arrKeyPressed">mảng các kí tự của các phím đã được nhấn</param>
+        /// <returns>kí tự tương ứng</returns>
         public char ConvertToChar(params char[] arrKeyPressed)
         {
             //do bản mã chưa thống nhất nên vẫn còn nhiều trường hợp chưa chính xác
@@ -149,6 +201,7 @@ namespace TypingBC.Business
             if (arrKeyPressed.Length > 6)
             {
                 m_bDigit = false;
+                m_bMath = true;
                 return result;
             }
 
@@ -160,7 +213,7 @@ namespace TypingBC.Business
                     return result;
                 b |= 0x1 << (m_arrBrailleKeys[c] - 1);
             }
-            //xử lý số và các kí hiệu toán học
+            //xử lý số
             if (m_bDigit)
             {
                 int p = Array.IndexOf<int>(m_arrIndex, b);
@@ -169,6 +222,12 @@ namespace TypingBC.Business
                     return (p + 1).ToString()[0];
                 }
                 return result;
+            }
+            //xử lý các kí hiệu toán học trong trường hợp trước đó là số
+            if (m_bMath)
+            {
+                m_bMath = false;
+                return SymbolMath(b);
             }
             //trường hợp ko xuất ra kí tự
             if (special(b))
@@ -192,7 +251,8 @@ namespace TypingBC.Business
             //viết hoa
             if (m_bUpper)
             {
-                m_bUpper = false;
+                if(!m_bCapsLock)
+                    m_bUpper = false;
                 result = Char.ToUpper(result);
             }
 
@@ -203,7 +263,9 @@ namespace TypingBC.Business
         {
             //TODO: đọc từ DB vào m_arrBrailleKeys
             m_bUpper = false;
+            m_bCapsLock = false;
             m_bDigit = false;
+            m_bMath = false;
             m_iMark = -1;
             m_arrBrailleKeys = new Dictionary<char, int>();
             //do hiện nay đang fix 6 phím này nên chưa load từ database
