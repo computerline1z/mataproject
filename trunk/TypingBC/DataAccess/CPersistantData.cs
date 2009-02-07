@@ -20,6 +20,8 @@ namespace TypingBC.DataAccess
         private DataTable m_dtExercise;
         private DataTable m_dtExSet;
         private DataTable m_dtUser;
+        private DataTable m_dtPracticeData;
+        private DataTable m_dtSpeech;
 
         private DataTable ReadDataFile(string sFile)
         {
@@ -184,10 +186,17 @@ namespace TypingBC.DataAccess
             return null;
         }
 
-        public bool UpdateUserName(string UserName)
+        public bool AddUser(string UserName)
         {
-            //TODO: add code
-            return true;
+            try
+            {
+                m_dtUser.Rows.Add(UserName, -1, 0);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public int LoadConfig()
@@ -205,52 +214,116 @@ namespace TypingBC.DataAccess
         {
             m_dtUser = ReadDataFile(TABLEFILE_USER);
             m_dtUser.CaseSensitive = false;
+            m_dtUser.PrimaryKey = new DataColumn[] { m_dtUser.Columns[0] };
+
             m_dtExercise = ReadDataFile(TABLEFILE_EXERCISE);
             m_dtExercise.CaseSensitive = false;
+
             m_dtExSet = ReadDataFile(TABLEFILE_EXERCISESET);
             m_dtExSet.CaseSensitive = false;
+
+            m_dtPracticeData = ReadDataFile(TABLEFILE_PRACTICEDATA);
+            m_dtPracticeData.CaseSensitive = false;
+            m_dtPracticeData.PrimaryKey = new DataColumn[] { m_dtPracticeData.Columns[0] };
+
+            m_dtSpeech = ReadDataFile(TABLEFILE_SPEECH);
+            m_dtSpeech.CaseSensitive = false;
+            m_dtSpeech.PrimaryKey = new DataColumn[] { m_dtSpeech.Columns[0] };
         }
 
         public bool UpdatePracData(CPracticeData data)
         {
-            //TODO: add code
-            return false;
+            try
+            {
+                int iNewID;
+                for (iNewID = 0; m_dtPracticeData.Rows.Contains(iNewID); ++iNewID) ;
+                m_dtPracticeData.Rows.Add(iNewID, data.UserName, data.PraticeTime.ToBinary(), data.ExerciseCount,
+                    data.KeyCount, data.FailKeyCount, data.UsingHelpCount, data.TotalTime);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         public bool UpdateUserTypingMode(string UserName, int mode)
         {
-            //TODO: add code
-            return false;
+            DataRow dtRow = m_dtUser.Rows.Find(UserName);
+            if(dtRow != null)
+                dtRow[2] = mode;
+            return dtRow != null;
         }
 
-        public int LoadUserTypingMode(string UserName)
+        public TypingMode LoadUserTypingMode(string UserName)
         {
-            //TODO: add code
-            return 0;
+            DataRow dtRow = m_dtUser.Rows.Find(UserName);
+            if (dtRow != null)
+                return (TypingMode)dtRow[2];
+            return TypingMode.NORMAL;
         }
 
-        public bool LoadUsingExID(string UserName, int id)
+        public bool SetUsingExID(string UserName, int id)
         {
-            //TODO: add code
-            return false;
+            DataRow dtRow = m_dtUser.Rows.Find(UserName);
+            if (dtRow != null)
+                dtRow[1] = id;
+            return dtRow != null;
         }
 
         public int LoadUsingExID(string UserName)
         {
-            //TODO: add code
-            return 0;
+            DataRow dtRow = m_dtUser.Rows.Find(UserName);
+            if (dtRow != null)
+                return (int)dtRow[1];
+            return -1;
         }
 
         public CPracticeData[] LoadPracData(string UserName)
         {
-            //TODO: add code
-            return null;
+            try
+            {
+                string s = string.Format("UserName like '{0}'", UserName.Trim().Replace("'", "''"));
+                DataRow[] arrRows = m_dtPracticeData.Select(s);
+                if (arrRows != null && arrRows.Length > 0)
+                {
+                    List<CPracticeData> lsRet = new List<CPracticeData>();
+                    foreach (DataRow dtRow in arrRows)
+                    {
+                        CPracticeData data = new CPracticeData(dtRow[1].ToString());
+                        data.PraticeTime = new DateTime(long.Parse(dtRow[2].ToString()));
+                        data.ExerciseCount = long.Parse(dtRow[3].ToString());
+                        data.KeyCount = long.Parse(dtRow[4].ToString());
+                        data.FailKeyCount = long.Parse(dtRow[5].ToString());
+                        data.UsingHelpCount = long.Parse(dtRow[6].ToString());
+                        data.TotalTime = long.Parse(dtRow[7].ToString());
+                        lsRet.Add(data);
+                    }
+                    return lsRet.ToArray();
+                }
+                return null;
+            }
+            catch (System.Exception ex)
+            {
+                return null;
+            }
         }
 
-        public string GetSpeechEntry(int iStringID, out bool isWavFile)
+        /// <summary>
+        /// Lấy về 1 chuỗi trợ giúp từ bảng SPEECH trong CSDL.
+        /// </summary>
+        /// <param name="iStringID">ID của chuỗi.</param>
+        /// <param name="getWavFile">muốn lấy về đường dẫn đến file wav hay là nội dung chuỗi trợ giúp?</param>
+        /// <returns>tùy theo tham số getWavFile sẽ trả về đường dẫn đến file wav (getWavFile = TRUE)
+        /// hoặc nội dung chuỗi trợ giúp trong CSDL (getWavFile = FALSE). Trả về <see cref="string.Empty"/>
+        /// nếu không tìm thấy.</returns>
+        public string GetSpeechEntry(int iStringID, bool getWavFile)
         {
-            //TODO: add code
-            isWavFile = false;
+            DataRow[] arrRows = m_dtSpeech.Select("ID = " + iStringID);
+            if(arrRows.Length > 0)
+            {
+                return arrRows[0][getWavFile ? 2 : 1].ToString();
+            }
             return string.Empty;
         }
     }
