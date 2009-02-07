@@ -12,8 +12,7 @@ namespace TypingBC.Business
 
         public static void ReadString(int iStringID)
         {
-            bool isWavFile;
-            string pathFile = m_Data.GetSpeechEntry(iStringID, out isWavFile);
+            string pathFile = m_Data.GetSpeechEntry(iStringID, true);
 
             SoundPlayer player = new SoundPlayer(pathFile);
             player.Play();
