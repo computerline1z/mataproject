@@ -8,7 +8,7 @@ using TypingBC.Business;
 
 namespace TypingBC.DataAccess
 {
-    public class CPersistantData
+    public class CPersistantData : IDisposable
     {
         private const string TABLEFILE_EXERCISESET = "Data/XML/tbExerciseSet.xml";
         private const string TABLEFILE_EXERCISE = "Data/XML/tbExercise.xml";
@@ -38,6 +38,16 @@ namespace TypingBC.DataAccess
                 s += s.EndsWith("\\") ? "" : "\\";
                 return s;
             }
+        }
+
+        public void SaveData()
+        {
+            string sPath = CurrentPath;
+            m_dtExercise.WriteXml(sPath + TABLEFILE_EXERCISE);
+            m_dtExSet.WriteXml(sPath + TABLEFILE_EXERCISESET);
+            m_dtUser.WriteXml(sPath + TABLEFILE_USER);
+            m_dtPracticeData.WriteXml(sPath + TABLEFILE_PRACTICEDATA);
+            m_dtSpeech.WriteXml(sPath + TABLEFILE_SPEECH);
         }
 
         /// <summary>
@@ -326,5 +336,14 @@ namespace TypingBC.DataAccess
             }
             return string.Empty;
         }
+
+        #region IDisposable Members
+
+        void IDisposable.Dispose()
+        {
+            SaveData();
+        }
+
+        #endregion
     }
 }
