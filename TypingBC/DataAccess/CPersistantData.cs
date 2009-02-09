@@ -26,6 +26,7 @@ namespace TypingBC.DataAccess
         private DataTable m_dtUser;
         private DataTable m_dtPracticeData;
         private DataTable m_dtSpeech;
+        private Dictionary<string, DataSet> m_lsDataSets = new Dictionary<string, DataSet>();
 
         private static CPersistantData m_Instance = null;
 
@@ -36,6 +37,11 @@ namespace TypingBC.DataAccess
         void IDisposable.Dispose()
         {
             SaveData();
+            foreach (string sKey in m_lsDataSets.Keys)
+            {
+                m_lsDataSets[sKey].Dispose();
+            }
+            m_lsDataSets.Clear();
             m_Instance = null;
         }
 
@@ -79,7 +85,8 @@ namespace TypingBC.DataAccess
         private DataTable ReadDataFile(string sFile)
         {
             DataSet dtSet = new DataSet();
-            dtSet.ReadXml(CurrentPath + sFile);
+            dtSet.ReadXml(CurrentPath + sFile, XmlReadMode.ReadSchema);
+            m_lsDataSets.Add(CurrentPath + sFile, dtSet);
             return dtSet.Tables[dtSet.Tables.Count - 1];
         }
 
@@ -97,21 +104,15 @@ namespace TypingBC.DataAccess
         {
             string sPath = CurrentPath;
 
-            XmlWriter writer = new XmlTextWriter(sPath + TABLEFILE_USER, Encoding.UTF8);
-            writer.WriteStartDocument(true);
-            writer.WriteStartElement("dataroot");
-            //writer.WriteAttributeString("xmlns:od", "urn:schemas-microsoft-com:officedata");
-            //writer.WriteAttributeString("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
-            m_dtUser.WriteXml(writer);
-            writer.WriteEndElement();
-            writer.WriteEndDocument();
-            writer.Close();
-
-//             m_dtExercise.WriteXml(sPath + TABLEFILE_EXERCISE);
-//             m_dtExSet.WriteXml(sPath + TABLEFILE_EXERCISESET);
-//             m_dtUser.WriteXml(sPath + TABLEFILE_USER);
-//             m_dtPracticeData.WriteXml(sPath + TABLEFILE_PRACTICEDATA);
-//             m_dtSpeech.WriteXml(sPath + TABLEFILE_SPEECH);
+            foreach(string sKeys in m_lsDataSets.Keys)
+            {
+                m_lsDataSets[sKeys].WriteXml(sKeys, XmlWriteMode.WriteSchema);
+            }
+            //m_dtExercise.DataSet.WriteXml(sPath + TABLEFILE_EXERCISE);
+            //m_dtExSet.DataSet.WriteXml(sPath + TABLEFILE_EXERCISESET);
+            //m_dtUser.DataSet.WriteXml(sPath + TABLEFILE_USER);
+            //m_dtPracticeData.DataSet.WriteXml(sPath + TABLEFILE_PRACTICEDATA);
+            //m_dtSpeech.DataSet.WriteXml(sPath + TABLEFILE_SPEECH);
         }
 
         #endregion
@@ -151,7 +152,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select(string.Format("ExSetID LIKE '{0}'", (int)type));
+                DataRow[] arrRows = m_dtExercise.Select("ExSetID = " + (int)type);
 
                 List<CExercise> lsRet = new List<CExercise>();
 
@@ -183,7 +184,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExSet.Select(string.Format("ID LIKE '{0}'", (int)type));
+                DataRow[] arrRows = m_dtExSet.Select("ID = " + (int)type);
                 if (arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
@@ -200,7 +201,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select(string.Format("ID LIKE '{0}'", iExID));
+                DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
                 if(arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
@@ -217,7 +218,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select(string.Format("ID LIKE '{0}'", iExID));
+                DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
                
                 if (arrRows != null && arrRows.Length > 0)
                 {
@@ -272,7 +273,6 @@ namespace TypingBC.DataAccess
                 dtRowNew[0] = UserName;
                 dtRowNew[1] = -1;
                 dtRowNew[2] = 0;
-                //m_dtUser.ImportRow(dtRowNew);
                 m_dtUser.Rows.Add(dtRowNew);
                 m_dtUser.AcceptChanges();
                 return true;
@@ -300,8 +300,18 @@ namespace TypingBC.DataAccess
             {
                 int iNewID;
                 for (iNewID = 0; m_dtPracticeData.Rows.Contains(iNewID); ++iNewID) ;
+                DataRow dtRowNew = m_dtPracticeData.NewRow();
+                dtRowNew[0] = iNewID;
+                dtRowNew[1] = data.UserName;
+                dtRowNew[2] = data.PraticeTime.ToBinary();
+                dtRowNew[3] = data.ExerciseCount;
+                dtRowNew[4] = data.KeyCount;
+                dtRowNew[0] = iNewID;
+                dtRowNew[0] = iNewID;
+                dtRowNew[0] = iNewID;
                 m_dtPracticeData.Rows.Add(iNewID, data.UserName, data.PraticeTime.ToBinary(), data.ExerciseCount,
                     data.KeyCount, data.FailKeyCount, data.UsingHelpCount, data.TotalTime);
+                m_dtPracticeData.AcceptChanges();
                 return true;
             }
             catch
@@ -313,8 +323,11 @@ namespace TypingBC.DataAccess
         public bool UpdateUserTypingMode(string UserName, int mode)
         {
             DataRow dtRow = m_dtUser.Rows.Find(UserName);
-            if(dtRow != null)
+            if (dtRow != null)
+            {
                 dtRow[2] = mode;
+                m_dtUser.AcceptChanges();
+            }
             return dtRow != null;
         }
 
@@ -330,7 +343,10 @@ namespace TypingBC.DataAccess
         {
             DataRow dtRow = m_dtUser.Rows.Find(UserName);
             if (dtRow != null)
+            {
                 dtRow[1] = id;
+                m_dtUser.AcceptChanges();
+            }
             return dtRow != null;
         }
 
@@ -382,7 +398,7 @@ namespace TypingBC.DataAccess
         /// nếu không tìm thấy.</returns>
         public string GetSpeechEntry(int iStringID, bool getWavFile)
         {
-            DataRow[] arrRows = m_dtSpeech.Select(string.Format("ID LIKE '{0}'", iStringID));
+            DataRow[] arrRows = m_dtSpeech.Select("ID = " + iStringID);
             if(arrRows.Length > 0)
             {
                 return arrRows[0][getWavFile ? 2 : 1].ToString();
