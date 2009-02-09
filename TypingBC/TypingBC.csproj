@@ -98,6 +98,26 @@
     <Content Include="Data\TXT\Help Layer 21.txt" />
     <Content Include="Data\TXT\Help Layer 3.txt" />
     <Content Include="Data\TXT\Help.txt" />
+    <Content Include="Data\WAV\10.wav" />
+    <Content Include="Data\WAV\11.wav" />
+    <Content Include="Data\WAV\12.wav" />
+    <Content Include="Data\WAV\201.wav" />
+    <Content Include="Data\WAV\202.wav" />
+    <Content Include="Data\WAV\211.wav" />
+    <Content Include="Data\WAV\212.wav" />
+    <Content Include="Data\WAV\221.wav" />
+    <Content Include="Data\WAV\222.wav" />
+    <Content Include="Data\WAV\231.wav" />
+    <Content Include="Data\WAV\232.wav" />
+    <Content Include="Data\WAV\241.wav" />
+    <Content Include="Data\WAV\242.wav" />
+    <Content Include="Data\WAV\251.wav" />
+    <Content Include="Data\WAV\252.wav" />
+    <Content Include="Data\WAV\261.wav" />
+    <Content Include="Data\WAV\271.wav" />
+    <Content Include="Data\WAV\30.wav" />
+    <Content Include="Data\WAV\31.wav" />
+    <Content Include="Data\WAV\40.wav" />
     <Content Include="Data\XML\tbConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -118,9 +138,6 @@
     </Content>
     <Content Include="Presentation\View\Icons\Notify.ico" />
     <Content Include="Presentation\View\Icons\Sound.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\WAV\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,13 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:57">
-<tbSpeech>
-<ID>0</ID>
-<HelpString>Help string 01</HelpString>
-<WavFile>WavFile 01</WavFile>
-</tbSpeech>
-<tbSpeech>
-<ID>1</ID>
-<HelpString>Help string 02</HelpString>
-<WavFile>Wav File 02</WavFile>
-</tbSpeech>
+  <tbSpeech>
+    <ID>10</ID>
+    <HelpString>Giới thiệu 2 chế độ gõ</HelpString>
+    <WavFile>..\..\Data\WAV\10.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>11</ID>
+    <HelpString>Giới thiệu chế độ gõ Bình Thường</HelpString>
+    <WavFile>..\..\Data\WAV\11.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>12</ID>
+    <HelpString>Giới thiệu chế độ gõ Braille</HelpString>
+    <WavFile>..\..\Data\WAV\12.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>201</ID>
+    <HelpString>String 201 </HelpString>
+    <WavFile>..\..\Data\WAV\201.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>211</ID>
+    <HelpString>String 211 </HelpString>
+    <WavFile>..\..\Data\WAV\211.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>221</ID>
+    <HelpString>String 221 </HelpString>
+    <WavFile>..\..\Data\WAV\221.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>231</ID>
+    <HelpString>String 231 </HelpString>
+    <WavFile>..\..\Data\WAV\231.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>241</ID>
+    <HelpString>String 241 </HelpString>
+    <WavFile>..\..\Data\WAV\241.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>251</ID>
+    <HelpString>String 251 </HelpString>
+    <WavFile>..\..\Data\WAV\251.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>261</ID>
+    <HelpString>String 261 </HelpString>
+    <WavFile>..\..\Data\WAV\261.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>271</ID>
+    <HelpString>String 271 </HelpString>
+    <WavFile>..\..\Data\WAV\271.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>202</ID>
+    <HelpString>String 202 </HelpString>
+    <WavFile>..\..\Data\WAV\202.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>212</ID>
+    <HelpString>String 212 </HelpString>
+    <WavFile>..\..\Data\WAV\212.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>222</ID>
+    <HelpString>String 222 </HelpString>
+    <WavFile>..\..\Data\WAV\222.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>232</ID>
+    <HelpString>String 232 </HelpString>
+    <WavFile>..\..\Data\WAV\232.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>242</ID>
+    <HelpString>String 242 </HelpString>
+    <WavFile>..\..\Data\WAV\242.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>252</ID>
+    <HelpString>String 252 </HelpString>
+    <WavFile>..\..\Data\WAV\252.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>30</ID>
+    <HelpString>String 30 </HelpString>
+    <WavFile>..\..\Data\WAV\30.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>31</ID>
+    <HelpString>String 31 </HelpString>
+    <WavFile>..\..\Data\WAV\31.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>40</ID>
+    <HelpString>String 40</HelpString>
+    <WavFile>..\..\Data\WAV\40.wav</WavFile>
+  </tbSpeech>
 </dataroot>
