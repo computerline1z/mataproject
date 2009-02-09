@@ -1,103 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:57">
-  <tbSpeech>
-    <ID>10</ID>
-    <HelpString>Giới thiệu 2 chế độ gõ</HelpString>
-    <WavFile>..\..\Data\WAV\10.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>11</ID>
-    <HelpString>Giới thiệu chế độ gõ Bình Thường</HelpString>
-    <WavFile>..\..\Data\WAV\11.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>12</ID>
-    <HelpString>Giới thiệu chế độ gõ Braille</HelpString>
-    <WavFile>..\..\Data\WAV\12.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>201</ID>
-    <HelpString>String 201 </HelpString>
-    <WavFile>..\..\Data\WAV\201.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>211</ID>
-    <HelpString>String 211 </HelpString>
-    <WavFile>..\..\Data\WAV\211.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>221</ID>
-    <HelpString>String 221 </HelpString>
-    <WavFile>..\..\Data\WAV\221.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>231</ID>
-    <HelpString>String 231 </HelpString>
-    <WavFile>..\..\Data\WAV\231.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>241</ID>
-    <HelpString>String 241 </HelpString>
-    <WavFile>..\..\Data\WAV\241.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>251</ID>
-    <HelpString>String 251 </HelpString>
-    <WavFile>..\..\Data\WAV\251.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>261</ID>
-    <HelpString>String 261 </HelpString>
-    <WavFile>..\..\Data\WAV\261.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>271</ID>
-    <HelpString>String 271 </HelpString>
-    <WavFile>..\..\Data\WAV\271.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>202</ID>
-    <HelpString>String 202 </HelpString>
-    <WavFile>..\..\Data\WAV\202.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>212</ID>
-    <HelpString>String 212 </HelpString>
-    <WavFile>..\..\Data\WAV\212.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>222</ID>
-    <HelpString>String 222 </HelpString>
-    <WavFile>..\..\Data\WAV\222.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>232</ID>
-    <HelpString>String 232 </HelpString>
-    <WavFile>..\..\Data\WAV\232.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>242</ID>
-    <HelpString>String 242 </HelpString>
-    <WavFile>..\..\Data\WAV\242.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>252</ID>
-    <HelpString>String 252 </HelpString>
-    <WavFile>..\..\Data\WAV\252.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>30</ID>
-    <HelpString>String 30 </HelpString>
-    <WavFile>..\..\Data\WAV\30.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>40</ID>
-    <HelpString>String 40</HelpString>
-    <WavFile>..\..\Data\WAV\40.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
-    <ID>41</ID>
-    <HelpString>String 41</HelpString>
-    <WavFile>..\..\Data\WAV\41.wav</WavFile>
-  </tbSpeech>
+<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
+<xsd:schema>
+<xsd:element name="dataroot">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element ref="tbSpeech" minOccurs="0" maxOccurs="unbounded"/>
+</xsd:sequence>
+<xsd:attribute name="generated" type="xsd:dateTime"/>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="tbSpeech">
+<xsd:annotation>
+<xsd:appinfo>
+<od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
+<od:tableProperty name="Orientation" type="2" value="0"/>
+<od:tableProperty name="OrderByOn" type="1" value="0"/>
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAACxwpIUZuowSKQG4CyoIPDAAAAAAKo+pRfAdeNAAADiAQAAAAB0AGIA
+UwBwAGUAZQBjAGgAAAAAAAAAMonQ1z8jKUyHRprwUwJqPwcAAACxwpIUZuowSKQG
+4CyoIPDASQBEAAAAAAAAAH3XBJT++G5JirYKv7mk6RMHAAAAscKSFGbqMEikBuAs
+qCDwwEgAZQBsAHAAUwB0AHIAaQBuAGcAAAAAAAAAYZHlQMnuzk6Q1CUYc9wLXQcA
+AACxwpIUZuowSKQG4CyoIPDAVwBhAHYARgBpAGwAZQAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
+"/>
+<od:tableProperty name="DefaultView" type="2" value="2"/>
+<od:tableProperty name="GUID" type="9" value="scKSFGbqMEikBuAsqCDwwA==
+"/>
+<od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
+<od:tableProperty name="TotalsRow" type="1" value="0"/>
+<od:tableProperty name="FilterOnLoad" type="1" value="0"/>
+<od:tableProperty name="OrderByOnLoad" type="1" value="1"/>
+<od:tableProperty name="HideNewField" type="1" value="0"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="ID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="1"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="HelpString" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="3300"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="IMEMode" type="2" value="0"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+<xsd:element name="WavFile" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:annotation>
+<xsd:appinfo>
+<od:fieldProperty name="ColumnWidth" type="3" value="2415"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+<od:fieldProperty name="Required" type="1" value="0"/>
+<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+<od:fieldProperty name="DisplayControl" type="3" value="109"/>
+<od:fieldProperty name="IMEMode" type="2" value="0"/>
+<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextAlign" type="2" value="0"/>
+<od:fieldProperty name="AggregateType" type="4" value="-1"/>
+</xsd:appinfo>
+</xsd:annotation>
+<xsd:simpleType>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="255"/>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-10T00:18:36">
+<tbSpeech>
+<ID>10</ID>
+<HelpString>Giới thiệu 2 chế độ gõ</HelpString>
+<WavFile>..\..\Data\WAV\10.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>11</ID>
+<HelpString>Giới thiệu chế độ gõ Bình Thường</HelpString>
+<WavFile>..\..\Data\WAV\11.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>12</ID>
+<HelpString>Giới thiệu chế độ gõ Braille</HelpString>
+<WavFile>..\..\Data\WAV\12.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>201</ID>
+<HelpString>String 201 </HelpString>
+<WavFile>..\..\Data\WAV\201.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>211</ID>
+<HelpString>String 211 </HelpString>
+<WavFile>..\..\Data\WAV\211.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>221</ID>
+<HelpString>String 221 </HelpString>
+<WavFile>..\..\Data\WAV\221.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>231</ID>
+<HelpString>String 231 </HelpString>
+<WavFile>..\..\Data\WAV\231.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>241</ID>
+<HelpString>String 241 </HelpString>
+<WavFile>..\..\Data\WAV\241.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>251</ID>
+<HelpString>String 251 </HelpString>
+<WavFile>..\..\Data\WAV\251.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>261</ID>
+<HelpString>String 261 </HelpString>
+<WavFile>..\..\Data\WAV\261.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>271</ID>
+<HelpString>String 271 </HelpString>
+<WavFile>..\..\Data\WAV\271.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>202</ID>
+<HelpString>String 202 </HelpString>
+<WavFile>..\..\Data\WAV\202.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>212</ID>
+<HelpString>String 212 </HelpString>
+<WavFile>..\..\Data\WAV\212.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>222</ID>
+<HelpString>String 222 </HelpString>
+<WavFile>..\..\Data\WAV\222.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>232</ID>
+<HelpString>String 232 </HelpString>
+<WavFile>..\..\Data\WAV\232.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>242</ID>
+<HelpString>String 242 </HelpString>
+<WavFile>..\..\Data\WAV\242.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>252</ID>
+<HelpString>String 252 </HelpString>
+<WavFile>..\..\Data\WAV\252.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>30</ID>
+<HelpString>String 30 </HelpString>
+<WavFile>..\..\Data\WAV\30.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>31</ID>
+<HelpString>String 31 </HelpString>
+<WavFile>..\..\Data\WAV\31.wav</WavFile>
+</tbSpeech>
+<tbSpeech>
+<ID>40</ID>
+<HelpString>String 40</HelpString>
+<WavFile>..\..\Data\WAV\40.wav</WavFile>
+</tbSpeech>
 </dataroot>
+</root>
