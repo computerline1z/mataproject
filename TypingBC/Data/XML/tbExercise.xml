@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:35">
-<tbExercise>
-<ID>-1</ID>
-<ExSetID>0</ExSetID>
-<ExName>Nhận dạng bàn phím</ExName>
-</tbExercise>
-<tbExercise>
-<ID>1</ID>
-<ExSetID>1</ExSetID>
-<ExName>Gõ các phím hàng giữa</ExName>
-<DBFile>giua.txt</DBFile>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExercise>
-<tbExercise>
-<ID>2</ID>
-<ExSetID>1</ExSetID>
-<ExName>Gõ phím hàng trên</ExName>
-<DBFile>tren.txt</DBFile>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExercise>
-<tbExercise>
-<ID>3</ID>
-<ExSetID>2</ExSetID>
-<ExName>Bài tập gõ không dấu 1</ExName>
-<DBFile>nomark/bai01.txt</DBFile>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExercise>
-<tbExercise>
-<ID>4</ID>
-<ExSetID>2</ExSetID>
-<ExName>Bài tập gõ không dấu 2</ExName>
-<DBFile>nomark/bai02.txt</DBFile>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExercise>
+  <tbExercise>
+    <ID>-1</ID>
+    <ExSetID>0</ExSetID>
+    <ExName>Nhận dạng bàn phím</ExName>
+  </tbExercise>
+  <tbExercise>
+    <ID>1</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>Gõ các phím hàng giữa</ExName>
+    <DBFile>giua.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>2</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>Gõ phím hàng trên</ExName>
+    <DBFile>tren.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>3</ID>
+    <ExSetID>2</ExSetID>
+    <ExName>Bài tập gõ không dấu 1</ExName>
+    <DBFile>nomark/bai01.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>4</ID>
+    <ExSetID>2</ExSetID>
+    <ExName>Bài tập gõ không dấu 2</ExName>
+    <DBFile>nomark/bai02.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
 </dataroot>

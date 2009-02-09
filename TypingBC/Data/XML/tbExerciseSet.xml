@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" generated="2009-01-31T16:02:25">
-<tbExerciseSet>
-<ID>0</ID>
-<ExSetName>Nhận dạng bàn phím</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>1</ID>
-<ExSetName>Tập gõ phím đơn giản</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>2</ID>
-<ExSetName>Tập gõ tiếng Việt không dấu</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>3</ID>
-<ExSetName>Tập gõ kiểu VNI</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>4</ID>
-<ExSetName>Tập gõ kiểu Telex</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
+  <tbExerciseSet>
+    <ID>0</ID>
+    <ExSetName>Nhận dạng bàn phím</ExSetName>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExerciseSet>
+  <tbExerciseSet>
+    <ID>1</ID>
+    <ExSetName>Tập gõ phím đơn giản</ExSetName>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExerciseSet>
+  <tbExerciseSet>
+    <ID>2</ID>
+    <ExSetName>Tập gõ tiếng Việt không dấu</ExSetName>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExerciseSet>
+  <tbExerciseSet>
+    <ID>3</ID>
+    <ExSetName>Tập gõ kiểu VNI</ExSetName>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExerciseSet>
+  <tbExerciseSet>
+    <ID>4</ID>
+    <ExSetName>Tập gõ kiểu Telex</ExSetName>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExerciseSet>
 </dataroot>
