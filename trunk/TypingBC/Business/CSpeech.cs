@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Text;
 using TypingBC.DataAccess;
 using System.Media;
+using System.Diagnostics;
 
 namespace TypingBC.Business
 {
     public class CSpeech
     {
-        private static CPersistantData m_Data;
 
         public static void ReadString(int iStringID)
         {
-            string pathFile = m_Data.GetSpeechEntry(iStringID, true);
-
+            string pathFile = CPersistantData.Instance.GetSpeechEntry(iStringID, true);
             SoundPlayer player = new SoundPlayer(pathFile);
             player.Play();
         }
@@ -25,7 +24,6 @@ namespace TypingBC.Business
 
         static CSpeech()
         {
-            m_Data = new CPersistantData();
         }
 
         //public static void ReadString(char c)

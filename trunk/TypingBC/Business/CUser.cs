@@ -15,18 +15,16 @@ namespace TypingBC.Business
     {
         #region ========================= private members ===========
 
-        private CPersistantData m_dataManager;
 
         #endregion
 
-        public CUser(CPersistantData dataManager)
+        public CUser()
         {
-            this.m_dataManager = dataManager;
         }
 
         public bool IsUserExisted(string sUserName)
         {
-            return m_dataManager.IsUserExisted(sUserName);
+            return CPersistantData.Instance.IsUserExisted(sUserName);
         }
 
         public bool AddUser(string sUserName)
@@ -34,39 +32,39 @@ namespace TypingBC.Business
             if(!IsUserExisted(sUserName))
             {
                 //TODO: add vào Database
-                return m_dataManager.AddUser(sUserName);
+                return CPersistantData.Instance.AddUser(sUserName);
             }
             return false;
         }
 
         public bool AppendPracticeData(CPracticeData data)
         {
-            return m_dataManager.UpdatePracData(data);
+            return CPersistantData.Instance.UpdatePracData(data);
         }
 
         public CPracticeData[] GetPracticeData(string sUserName)
         {
-            return m_dataManager.LoadPracData(sUserName);
+            return CPersistantData.Instance.LoadPracData(sUserName);
         }
 
         public int GetUsingExercise(string sUserName)
         {
-            return m_dataManager.LoadUsingExID(sUserName);
+            return CPersistantData.Instance.LoadUsingExID(sUserName);
         }
 
         public bool SetUsingExercise(string sUserName, int iUsing)
         {
-            return m_dataManager.SetUsingExID(sUserName, iUsing);
+            return CPersistantData.Instance.SetUsingExID(sUserName, iUsing);
         }
 
         public TypingMode GetUsingTypingMode(string sUserName)
         {
-            return m_dataManager.LoadUserTypingMode(sUserName);
+            return CPersistantData.Instance.LoadUserTypingMode(sUserName);
         }
 
         public bool SetUsingTypingMode(string sUserName, TypingMode mode)
         {
-            return m_dataManager.UpdateUserTypingMode(sUserName, (int)mode);
+            return CPersistantData.Instance.UpdateUserTypingMode(sUserName, (int)mode);
         }
     }
 }
