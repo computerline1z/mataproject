@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="tbUser.xsd" generated="2009-01-31T16:02:42">
-<tbUser>
-<UserName>test01</UserName>
-<UsingExID>1</UsingExID>
-<TypingMode>0</TypingMode>
-</tbUser>
-<tbUser>
-<UserName>test02</UserName>
-<UsingExID>-1</UsingExID>
-<TypingMode>0</TypingMode>
-</tbUser>
+  <tbUser>
+    <UserName>test01</UserName>
+    <UsingExID>1</UsingExID>
+    <TypingMode>0</TypingMode>
+  </tbUser>
+  <tbUser>
+    <UserName>test02</UserName>
+    <UsingExID>-1</UsingExID>
+    <TypingMode>0</TypingMode>
+  </tbUser>
 </dataroot>
