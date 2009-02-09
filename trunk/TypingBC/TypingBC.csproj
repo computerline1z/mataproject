@@ -115,9 +115,9 @@
     <Content Include="Data\WAV\252.wav" />
     <Content Include="Data\WAV\261.wav" />
     <Content Include="Data\WAV\271.wav" />
-    <Content Include="Data\WAV\30.wav" />
-    <Content Include="Data\WAV\31.wav" />
     <Content Include="Data\WAV\40.wav" />
+    <Content Include="Data\WAV\30.wav" />
+    <Content Include="Data\WAV\41.wav" />
     <Content Include="Data\XML\tbConfig.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
