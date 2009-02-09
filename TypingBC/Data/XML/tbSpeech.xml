@@ -91,13 +91,13 @@
     <WavFile>..\..\Data\WAV\30.wav</WavFile>
   </tbSpeech>
   <tbSpeech>
-    <ID>31</ID>
-    <HelpString>String 31 </HelpString>
-    <WavFile>..\..\Data\WAV\31.wav</WavFile>
-  </tbSpeech>
-  <tbSpeech>
     <ID>40</ID>
     <HelpString>String 40</HelpString>
     <WavFile>..\..\Data\WAV\40.wav</WavFile>
+  </tbSpeech>
+  <tbSpeech>
+    <ID>41</ID>
+    <HelpString>String 41</HelpString>
+    <WavFile>..\..\Data\WAV\41.wav</WavFile>
   </tbSpeech>
 </dataroot>
