@@ -5,11 +5,15 @@ using TypingBC.Presentation;
 using System.Data;
 using System.IO;
 using TypingBC.Business;
+using System.Xml;
 
 namespace TypingBC.DataAccess
 {
     public class CPersistantData : IDisposable
     {
+
+        #region ===================== Private members ==============================
+
         private const string TABLEFILE_EXERCISESET = "Data/XML/tbExerciseSet.xml";
         private const string TABLEFILE_EXERCISE = "Data/XML/tbExercise.xml";
         private const string TABLEFILE_CONFIG = "Data/XML/tbConfig.xml";
@@ -23,11 +27,60 @@ namespace TypingBC.DataAccess
         private DataTable m_dtPracticeData;
         private DataTable m_dtSpeech;
 
+        private static CPersistantData m_Instance = null;
+
+        #endregion
+
+        #region IDisposable Members
+
+        void IDisposable.Dispose()
+        {
+            SaveData();
+            m_Instance = null;
+        }
+
+        #endregion
+
+        #region =============== Singleton, Constructor, Utilities ==================
+
+        public static CPersistantData Instance
+        {
+            get
+            {
+                if (m_Instance == null)
+                {
+                    m_Instance = new CPersistantData();
+                }
+                return m_Instance;  
+            }
+        }
+
+        protected CPersistantData()
+        {
+            m_dtUser = ReadDataFile(TABLEFILE_USER);
+            m_dtUser.CaseSensitive = false;
+            m_dtUser.PrimaryKey = new DataColumn[] { m_dtUser.Columns[0] };
+
+            m_dtExercise = ReadDataFile(TABLEFILE_EXERCISE);
+            m_dtExercise.CaseSensitive = false;
+
+            m_dtExSet = ReadDataFile(TABLEFILE_EXERCISESET);
+            m_dtExSet.CaseSensitive = false;
+
+            m_dtPracticeData = ReadDataFile(TABLEFILE_PRACTICEDATA);
+            m_dtPracticeData.CaseSensitive = false;
+            m_dtPracticeData.PrimaryKey = new DataColumn[] { m_dtPracticeData.Columns[0] };
+
+            m_dtSpeech = ReadDataFile(TABLEFILE_SPEECH);
+            m_dtSpeech.CaseSensitive = false;
+            m_dtSpeech.PrimaryKey = new DataColumn[] { m_dtSpeech.Columns[0] };
+        }
+
         private DataTable ReadDataFile(string sFile)
         {
             DataSet dtSet = new DataSet();
             dtSet.ReadXml(CurrentPath + sFile);
-            return dtSet.Tables[1];
+            return dtSet.Tables[dtSet.Tables.Count - 1];
         }
 
         public string CurrentPath
@@ -43,12 +96,27 @@ namespace TypingBC.DataAccess
         public void SaveData()
         {
             string sPath = CurrentPath;
-            m_dtExercise.WriteXml(sPath + TABLEFILE_EXERCISE);
-            m_dtExSet.WriteXml(sPath + TABLEFILE_EXERCISESET);
-            m_dtUser.WriteXml(sPath + TABLEFILE_USER);
-            m_dtPracticeData.WriteXml(sPath + TABLEFILE_PRACTICEDATA);
-            m_dtSpeech.WriteXml(sPath + TABLEFILE_SPEECH);
+
+            XmlWriter writer = new XmlTextWriter(sPath + TABLEFILE_USER, Encoding.UTF8);
+            writer.WriteStartDocument(true);
+            writer.WriteStartElement("dataroot");
+            //writer.WriteAttributeString("xmlns:od", "urn:schemas-microsoft-com:officedata");
+            //writer.WriteAttributeString("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+            m_dtUser.WriteXml(writer);
+            writer.WriteEndElement();
+            writer.WriteEndDocument();
+            writer.Close();
+
+//             m_dtExercise.WriteXml(sPath + TABLEFILE_EXERCISE);
+//             m_dtExSet.WriteXml(sPath + TABLEFILE_EXERCISESET);
+//             m_dtUser.WriteXml(sPath + TABLEFILE_USER);
+//             m_dtPracticeData.WriteXml(sPath + TABLEFILE_PRACTICEDATA);
+//             m_dtSpeech.WriteXml(sPath + TABLEFILE_SPEECH);
         }
+
+        #endregion
+
+        #region ======================== Public interface ==========================
 
         /// <summary>
         /// Đọc danh sách các ExerciseSet
@@ -83,7 +151,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select("ExSetID = " + type);
+                DataRow[] arrRows = m_dtExercise.Select(string.Format("ExSetID LIKE '{0}'", (int)type));
 
                 List<CExercise> lsRet = new List<CExercise>();
 
@@ -115,7 +183,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExSet.Select("ID = " + type);
+                DataRow[] arrRows = m_dtExSet.Select(string.Format("ID LIKE '{0}'", (int)type));
                 if (arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
@@ -132,7 +200,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
+                DataRow[] arrRows = m_dtExercise.Select(string.Format("ID LIKE '{0}'", iExID));
                 if(arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
@@ -149,7 +217,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
+                DataRow[] arrRows = m_dtExercise.Select(string.Format("ID LIKE '{0}'", iExID));
                
                 if (arrRows != null && arrRows.Length > 0)
                 {
@@ -200,7 +268,13 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                m_dtUser.Rows.Add(UserName, -1, 0);
+                DataRow dtRowNew = m_dtUser.NewRow();
+                dtRowNew[0] = UserName;
+                dtRowNew[1] = -1;
+                dtRowNew[2] = 0;
+                //m_dtUser.ImportRow(dtRowNew);
+                m_dtUser.Rows.Add(dtRowNew);
+                m_dtUser.AcceptChanges();
                 return true;
             }
             catch
@@ -218,27 +292,6 @@ namespace TypingBC.DataAccess
         public void SaveConfig(int BlindRepeatTime)
         {
             //TODO: save lai config
-        }
-
-        public CPersistantData()
-        {
-            m_dtUser = ReadDataFile(TABLEFILE_USER);
-            m_dtUser.CaseSensitive = false;
-            m_dtUser.PrimaryKey = new DataColumn[] { m_dtUser.Columns[0] };
-
-            m_dtExercise = ReadDataFile(TABLEFILE_EXERCISE);
-            m_dtExercise.CaseSensitive = false;
-
-            m_dtExSet = ReadDataFile(TABLEFILE_EXERCISESET);
-            m_dtExSet.CaseSensitive = false;
-
-            m_dtPracticeData = ReadDataFile(TABLEFILE_PRACTICEDATA);
-            m_dtPracticeData.CaseSensitive = false;
-            m_dtPracticeData.PrimaryKey = new DataColumn[] { m_dtPracticeData.Columns[0] };
-
-            m_dtSpeech = ReadDataFile(TABLEFILE_SPEECH);
-            m_dtSpeech.CaseSensitive = false;
-            m_dtSpeech.PrimaryKey = new DataColumn[] { m_dtSpeech.Columns[0] };
         }
 
         public bool UpdatePracData(CPracticeData data)
@@ -329,19 +382,12 @@ namespace TypingBC.DataAccess
         /// nếu không tìm thấy.</returns>
         public string GetSpeechEntry(int iStringID, bool getWavFile)
         {
-            DataRow[] arrRows = m_dtSpeech.Select("ID = " + iStringID);
+            DataRow[] arrRows = m_dtSpeech.Select(string.Format("ID LIKE '{0}'", iStringID));
             if(arrRows.Length > 0)
             {
                 return arrRows[0][getWavFile ? 2 : 1].ToString();
             }
             return string.Empty;
-        }
-
-        #region IDisposable Members
-
-        void IDisposable.Dispose()
-        {
-            SaveData();
         }
 
         #endregion

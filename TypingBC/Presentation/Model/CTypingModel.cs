@@ -15,7 +15,6 @@ namespace TypingBC.Presentation.Model
 
         private CConfig m_configManager;
         private CUser m_userManager;
-        private CPersistantData m_dataManager;
 
         #endregion
 
@@ -37,12 +36,12 @@ namespace TypingBC.Presentation.Model
 
         public CExerciseSet[] GetExSetList()
         {
-            return m_dataManager.LoadExSetList();
+            return CPersistantData.Instance.LoadExSetList();
         }
 
         public CExercise[] GetExerciseList(ExerciseSetType type)
         {
-            return m_dataManager.LoadExerciseList(type);
+            return CPersistantData.Instance.LoadExerciseList(type);
         }
 
         public string GetNextString()
@@ -57,7 +56,7 @@ namespace TypingBC.Presentation.Model
         /// <returns></returns>
         public int GetExSetInstruction(bool bBegin)
         {
-            return m_dataManager.GetExSetInstruction(bBegin, m_usingExSet);
+            return CPersistantData.Instance.GetExSetInstruction(bBegin, m_usingExSet);
         }
 
         /// <summary>
@@ -69,23 +68,22 @@ namespace TypingBC.Presentation.Model
         {
             if(m_usingExercise != null)
             {
-                return m_dataManager.GetExerciseInstruction(bBegin, m_usingExercise.ExID);
+                return CPersistantData.Instance.GetExerciseInstruction(bBegin, m_usingExercise.ExID);
             }
             return -1;
         }
 
         public bool LoadExercise(int iExID)
         {
-            m_usingExercise = m_dataManager.LoadExercise(iExID);
+            m_usingExercise = CPersistantData.Instance.LoadExercise(iExID);
             return (m_usingExercise != null);
         }
 
 
         public CTypingModel()
         {
-            m_dataManager = new CPersistantData();
-            m_configManager = new CConfig(m_dataManager);
-            m_userManager = new CUser(m_dataManager);
+            m_configManager = new CConfig();
+            m_userManager = new CUser();
             m_usingExercise = null;
         }
 
