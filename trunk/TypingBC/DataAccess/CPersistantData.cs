@@ -231,6 +231,9 @@ namespace TypingBC.DataAccess
                     ex.BeginInstruction = (int)dtRow[4];
                     ex.EndInstruction = (int)dtRow[5];
 
+                    /************************************************************/
+                    /* CurrentPath: duong dan khong dung?
+                    /************************************************************/
                     StreamReader streamFile = new StreamReader(CurrentPath + sDataFile);
                     while (!streamFile.EndOfStream)
                     {
