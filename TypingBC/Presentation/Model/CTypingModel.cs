@@ -72,7 +72,7 @@ namespace TypingBC.Presentation.Model
             }
             return -1;
         }
-
+        
         public bool LoadExercise(int iExID)
         {
             m_usingExercise = CPersistantData.Instance.LoadExercise(iExID);
