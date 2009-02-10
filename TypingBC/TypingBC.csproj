@@ -92,14 +92,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\TypingBC_data.mdb" />
-    <Content Include="Data\TXT\giua.txt" />
-    <Content Include="Data\TXT\Help Hot Key.txt" />
-    <Content Include="Data\TXT\Help Layer 22.txt" />
-    <Content Include="Data\TXT\Help Layer 1.txt" />
-    <Content Include="Data\TXT\Help Layer 21.txt" />
-    <Content Include="Data\TXT\Help Layer 3.txt" />
-    <Content Include="Data\TXT\Help.txt" />
-    <Content Include="Data\TXT\tren.txt" />
+    <Content Include="Data\TXT\giua.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help Hot Key.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help Layer 22.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help Layer 1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help Layer 21.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help Layer 3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\Help.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\tren.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\WAV\10.wav" />
     <Content Include="Data\WAV\11.wav" />
     <Content Include="Data\WAV\12.wav" />
