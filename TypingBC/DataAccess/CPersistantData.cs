@@ -409,6 +409,20 @@ namespace TypingBC.DataAccess
             return string.Empty;
         }
 
+        /// <summary>
+        /// Lấy về kiểu gõ đang sử dụng
+        /// </summary>
+        /// <param name="ModeCode">Biến tham số trả về kiểu gõ. 
+        ///     1: VNI
+        ///     2: Telex
+        ///     3: NoMark
+        /// </param>
+        /// <returns>Chuỗi tên của kiểu gõ. Như "VNI" hay "Telex" hay "Không dấu".</returns>
+        public string LoadCurrentTypeMode(ref int ModeCode)
+        {
+            return string.Empty;
+        }
+
         #endregion
     }
 }

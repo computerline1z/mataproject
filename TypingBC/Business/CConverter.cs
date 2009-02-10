@@ -75,9 +75,9 @@ namespace TypingBC.Business
         /// Tra trong bảng m_arrUnicodeCode những kí tự có dấu để tìm được Index 
         /// tương ứng để ánh xạ thành các kiểu gõ khác.
         /// </summary>
-        /// <param name="cChar"> Kí tự cần tra bảng </param>
-        /// <returns> Index của kí tự tìm được trong bảng nếu tìm thấy</returns>
-        /// <returns> -1 nếu không tìm thấy </returns>
+        /// <param name="cChar">Kí tự cần tra bảng </param>
+        /// <returns>Index của kí tự tìm được trong bảng nếu tìm thấy</returns>
+        /// <returns>-1 nếu không tìm thấy </returns>
         private static int FindCharInTable(char cChar)
         {
             if ('a' <= cChar && cChar <= 'z')
@@ -93,9 +93,9 @@ namespace TypingBC.Business
         /// <summary>
         /// Chuyển chuỗi Unicode sang cách gõ VNI
         /// </summary>
-        /// <param name="sString"> Chuỗi Unicode cần được chuyển</param>
-        /// <returns> Chuỗi đã được chuyển </returns>
-        /// <example> "Thử nghiệm" -> "Thu73 nghie65m" </example>
+        /// <param name="sString">Chuỗi Unicode cần được chuyển</param>
+        /// <returns>Chuỗi đã được chuyển </returns>
+        /// <example>"Thử nghiệm" -> "Thu73 nghie65m" </example>
         public static string Str2VNI(string sString)
         {
             char[] arrString = sString.ToCharArray();
@@ -128,9 +128,9 @@ namespace TypingBC.Business
         /// <summary>
         /// Chuyển chuỗi Unicode sang cách gõ Telex
         /// </summary>
-        /// <param name="sString"> Chuỗi Unicode cần được chuyển</param>
-        /// <returns> Chuỗi đã được chuyển </returns>
-        /// <example> "Thử nghiệm" -> "Thuwr nghieejm" </example>
+        /// <param name="sString">Chuỗi Unicode cần được chuyển</param>
+        /// <returns>Chuỗi đã được chuyển </returns>
+        /// <example>"Thử nghiệm" -> "Thuwr nghieejm" </example>
         public static string Str2Telex(string sString)
         {
             char[] arrString = sString.ToCharArray();
@@ -163,9 +163,9 @@ namespace TypingBC.Business
         /// <summary>
         /// Chuyển chuỗi Unicode sang kiểu không bỏ dấu
         /// </summary>
-        /// <param name="sString"> Chuỗi Unicode cần được chuyển</param>
-        /// <returns> Chuỗi đã được chuyển </returns>
-        /// <example> "Thử nghiệm" -> "Thu nghiem </example>
+        /// <param name="sString">Chuỗi Unicode cần được chuyển</param>
+        /// <returns>Chuỗi đã được chuyển </returns>
+        /// <example>"Thử nghiệm" -> "Thu nghiem </example>
         public static string Str2NoMark(string sString)
         {
             char[] arrString = sString.ToCharArray();
@@ -193,6 +193,27 @@ namespace TypingBC.Business
                 }
             }
             return finalString;
+        }
+
+        /// <summary>
+        /// Chuyển chuỗi Unicode sang các kiểu gõ khác với mã số của kiểu gõ
+        /// </summary>
+        /// <param name="sString">Chuỗi Unicode cần được chuyển</param>
+        /// <param name="iMode">Mã số kiểu gõ hiện tại
+        ///     1: VNI
+        ///     2: Telex
+        ///     3: NoMark
+        /// </param>
+        /// <returns>Chuỗi đã được chuyển</returns>
+        public static string ConvertStrWithMode(string sString, int iMode)
+        {
+            switch (iMode)
+            {
+                case 1: return Str2VNI(sString);
+                case 2: return Str2Telex(sString);
+                case 3: return Str2NoMark(sString);
+            }
+            return string.Empty;
         }
     }
 }
