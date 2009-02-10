@@ -99,33 +99,26 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
   <dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-10T09:43:14">
     <tbSpeech>
       <ID>10</ID>
-      <HelpString>
-        Bạn hãy chọn chế độ gõ. Ở đây có 2 chế độ gõ là Bình Thường và Braille.
+      <HelpString>Bạn hãy chọn chế độ gõ. Ở đây có 2 chế độ gõ là Bình Thường và Braille.
 
         Chế độ gõ bình thường sẽ sử dụng tất cả các bàn phím để gõ.
 
-        Chế độ gõ Braille chỉ sử dụng 6 phím là A S D và J K L để gõ, các phím khác sẽ không nhận được (ngoại trừ phím Esc để dừng làm bài tập).
-      </HelpString>
+        Chế độ gõ Braille chỉ sử dụng 6 phím là A S D và J K L để gõ, các phím khác sẽ không nhận được (ngoại trừ phím Esc để dừng làm bài tập).</HelpString>
       <WavFile>..\..\Data\WAV\10.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>11</ID>
-      <HelpString>
-        Chế độ gõ Bình Thường
-      </HelpString>
+      <HelpString>Chế độ gõ Bình Thường</HelpString>
       <WavFile>..\..\Data\WAV\11.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>12</ID>
-      <HelpString>
-        Chế độ gõ 6 phím Braille.
-      </HelpString>
+      <HelpString>Chế độ gõ 6 phím Braille.</HelpString>
       <WavFile>..\..\Data\WAV\12.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>201</ID>
-      <HelpString>
-        Đối với chế độ gõ Bình Thường, có 7 hệ thống bài tập:
+      <HelpString>Đối với chế độ gõ Bình Thường, có 7 hệ thống bài tập:
 
         1. Bài tập nhận diện bàn phím: loại bài tập này giúp các bạn xác định kí tự ứng với một vị trí trên bàn phím.
 
@@ -139,15 +132,12 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 
         6. Bài tập gõ với kiểu VNI: loại bài tập này giúp các bạn luyện tập gõ có dấu một đoạn văn hoặc một bài thơ sử dụng các phím số từ 1 đến 9.
 
-        7. Bài tập gõ với kiểu TELEX: loại bài tập này giúp các bạn luyện tập gõ có dấu một đoạn văn hoặc một bài thơ sử dụng các phím r, s, f, j, x tương ứng với dấu hỏi, dấu sắc, dấu huyền, dấu nặng, dấu ngã.
-      </HelpString>
+        7. Bài tập gõ với kiểu TELEX: loại bài tập này giúp các bạn luyện tập gõ có dấu một đoạn văn hoặc một bài thơ sử dụng các phím r, s, f, j, x tương ứng với dấu hỏi, dấu sắc, dấu huyền, dấu nặng, dấu ngã.</HelpString>
       <WavFile>..\..\Data\WAV\201.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>211</ID>
-      <HelpString>
-        Nhận diện bàn phím
-      </HelpString>
+      <HelpString>Nhận diện bàn phím</HelpString>
       <WavFile>..\..\Data\WAV\211.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
@@ -182,8 +172,7 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
     </tbSpeech>
     <tbSpeech>
       <ID>202</ID>
-      <HelpString>
-        Đối với chế độ gõ Braille sử dụng 6 phím, có 5 hệ thống bài tập:
+      <HelpString>Đối với chế độ gõ Braille sử dụng 6 phím, có 5 hệ thống bài tập:
 
         1. Bài tập nhận diện bàn phím: loại bài tập này giúp các bạn xác định các phím đã chọn dùng để gõ.
 
@@ -193,64 +182,47 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 
         4. Bài tập gõ một kí tự có dấu: loại bài tập này giúp các bạn luyện tập gõ một kí tự có dấu sử dụng 6 phím đã chọn.
 
-        5. Bài tập gõ có dấu: loại bài tập này giúp các bạn luyện tập gõ có dấu một đoạn văn hoặc một bài thơ sử dụng 6 phím đã chọn.
-      </HelpString>
+        5. Bài tập gõ có dấu: loại bài tập này giúp các bạn luyện tập gõ có dấu một đoạn văn hoặc một bài thơ sử dụng 6 phím đã chọn.</HelpString>
       <WavFile>..\..\Data\WAV\202.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>212</ID>
-      <HelpString>
-        Nhận diện bàn phím
-      </HelpString>
+      <HelpString>Nhận diện bàn phím</HelpString>
       <WavFile>..\..\Data\WAV\212.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>222</ID>
-      <HelpString>
-        Bài tập gõ một ký tự không dấu
-      </HelpString>
+      <HelpString>Bài tập gõ một ký tự không dấu</HelpString>
       <WavFile>..\..\Data\WAV\222.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>232</ID>
-      <HelpString>
-        Bài tập gõ không dấu
-      </HelpString>
+      <HelpString>Bài tập gõ không dấu</HelpString>
       <WavFile>..\..\Data\WAV\232.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>242</ID>
-      <HelpString>
-        Bài tập gõ một ký tự có dấu
-      </HelpString>
+      <HelpString>Bài tập gõ một ký tự có dấu</HelpString>
       <WavFile>..\..\Data\WAV\242.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>252</ID>
-      <HelpString>
-        Bài tập gõ có dấu
-      </HelpString>
+      <HelpString>Bài tập gõ có dấu</HelpString>
       <WavFile>..\..\Data\WAV\252.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>30</ID>
-      <HelpString>
-        Dưới đây là tất cả các bài luyện dùng để tập gõ với cùng nội dung mà bạn đã chọn.
-      </HelpString>
+      <HelpString>Dưới đây là tất cả các bài luyện dùng để tập gõ với cùng nội dung mà bạn đã chọn.</HelpString>
       <WavFile>..\..\Data\WAV\30.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>40</ID>
-      <HelpString>
-        Hãy thử gõ vào bàn phím
-      </HelpString>
+      <HelpString>Hãy thử gõ vào bàn phím</HelpString>
       <WavFile>..\..\Data\WAV\40.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>41</ID>
-      <HelpString>
-        Sau khi bạn gõ hết một câu thì câu khác sẽ hiện ra cho đến hết đoạn văn hoặc đoạn thơ đó.
-      </HelpString>
+      <HelpString>Sau khi bạn gõ hết một câu thì câu khác sẽ hiện ra cho đến hết đoạn văn hoặc đoạn thơ đó.</HelpString>
       <WavFile>..\..\Data\WAV\41.wav</WavFile>
     </tbSpeech>
   </dataroot>
