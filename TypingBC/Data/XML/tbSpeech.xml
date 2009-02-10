@@ -15,10 +15,10 @@
 <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
 <od:tableProperty name="Orientation" type="2" value="0"/>
 <od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAACxwpIUZuowSKQG4CyoIPDAAAAAAKo+pRfAdeNAAADiAQAAAAB0AGIA
-UwBwAGUAZQBjAGgAAAAAAAAAMonQ1z8jKUyHRprwUwJqPwcAAACxwpIUZuowSKQG
-4CyoIPDASQBEAAAAAAAAAH3XBJT++G5JirYKv7mk6RMHAAAAscKSFGbqMEikBuAs
-qCDwwEgAZQBsAHAAUwB0AHIAaQBuAGcAAAAAAAAAYZHlQMnuzk6Q1CUYc9wLXQcA
+<od:tableProperty name="NameMap" type="11" value="CswOVQAAAACxwpIUZuowSKQG4CyoIPDAAAAAAG0g5/HMdeNAAABGAQAAAAB0AGIA
+UwBwAGUAZQBjAGgAAAAAAAAAgCAh0Mf/PkGwVP0QXCe57QcAAACxwpIUZuowSKQG
+4CyoIPDASQBEAAAAAAAAAL60TrZ/8NpDiNwNgF2D2OUHAAAAscKSFGbqMEikBuAs
+qCDwwEgAZQBsAHAAUwB0AHIAaQBuAGcAAAAAAAAAWYjQMuGR8UKUNN99QmkQiQcA
 AACxwpIUZuowSKQG4CyoIPDAVwBhAHYARgBpAGwAZQAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 "/>
@@ -38,7 +38,7 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 <xsd:annotation>
 <xsd:appinfo>
 <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="1"/>
+<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
@@ -48,7 +48,7 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 </xsd:appinfo>
 </xsd:annotation>
 </xsd:element>
-<xsd:element name="HelpString" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+<xsd:element name="HelpString" minOccurs="0" od:jetType="memo" od:sqlSType="ntext">
 <xsd:annotation>
 <xsd:appinfo>
 <od:fieldProperty name="ColumnWidth" type="3" value="3300"/>
@@ -56,17 +56,17 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
 <od:fieldProperty name="Required" type="1" value="0"/>
 <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
 <od:fieldProperty name="IMEMode" type="2" value="0"/>
 <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
 <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+<od:fieldProperty name="TextFormat" type="2" value="0"/>
 <od:fieldProperty name="TextAlign" type="2" value="0"/>
 <od:fieldProperty name="AggregateType" type="4" value="-1"/>
 </xsd:appinfo>
 </xsd:annotation>
 <xsd:simpleType>
 <xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
+<xsd:maxLength value="536870910"/>
 </xsd:restriction>
 </xsd:simpleType>
 </xsd:element>
@@ -96,7 +96,7 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 </xsd:complexType>
 </xsd:element>
 </xsd:schema>
-<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-10T00:18:36">
+<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-10T09:43:14">
 <tbSpeech>
 <ID>10</ID>
 <HelpString>Giới thiệu 2 chế độ gõ</HelpString>
@@ -194,7 +194,18 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 </tbSpeech>
 <tbSpeech>
 <ID>40</ID>
-<HelpString>String 40</HelpString>
+<HelpString>
+  Đây là hệ thống các Hot Key được sử dụng trong chương trình:
+  Hệ thống các phím tắt này bao gồm 8 phím tắt nằm ở hàng trên cùng của bàn phím, bắt đầu từ phím thứ 2 của hàng phím này (phím đầu tiên là phím Escape dùng để thoát chương trình). Các phím F1, F2, F3 cho đến F12 được xếp tuần tự trên dãy phím này. Dưới đây là chức năng của từng phím:
+
+  Phím F1: giới thiệu sơ lược chương trình.
+
+  Phím F2: hướng dẫn sử dụng hệ thống các phím nóng (hay Hot Key) cho người dùng.
+
+  Phím F3: chuyển đổi giao diện qua lại để hỗ trợ cho người dùng có thể thấy chữ và người dùng không thể thấy chữ.
+
+  Phím F4: hướng dẫn cách gõ từ đang gõ
+</HelpString>
 <WavFile>..\..\Data\WAV\40.wav</WavFile>
 </tbSpeech>
 </dataroot>
