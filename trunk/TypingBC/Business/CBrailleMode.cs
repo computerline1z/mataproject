@@ -178,6 +178,8 @@ namespace TypingBC.Business
         public void SetBrailleKeys(char[] arrKeys)
         {
             //lưu lại tất cả các phím đã set, thay đổi giá trị nếu phím đã được set
+            if (arrKeys.Length > 6)
+                return;
             for (int i = 0; i < 5; i++)
             {
                 if (m_arrBrailleKeys.ContainsKey(arrKeys[i]))
@@ -192,13 +194,13 @@ namespace TypingBC.Business
         /// </summary>
         /// <param name="arrKeyPressed">mảng các kí tự của các phím đã được nhấn</param>
         /// <returns>kí tự tương ứng</returns>
-        public char ConvertToChar(params char[] arrKeyPressed)
+        public char ConvertToChar(List<char> arrKeyPressed)
         {
             //do bản mã chưa thống nhất nên vẫn còn nhiều trường hợp chưa chính xác
             char result = '\0';
             int b = 0;
             //tạm báo có khoảng trắng
-            if (arrKeyPressed.Length > 6)
+            if (arrKeyPressed.Count > 6)
             {
                 m_bDigit = false;
                 m_bMath = true;
