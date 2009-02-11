@@ -104,43 +104,30 @@ namespace TypingBC.Business
             {
                 case 'a':
                     return 0;
-                    break;
                 case 'ă':
                     return 1;
-                    break;
                 case 'â':
                     return 2;
-                    break;
                 case 'e':
                     return 3;
-                    break;
                 case 'ê':
                     return 4;
-                    break;
                 case 'i':
                     return 5;
-                    break;
                 case 'o':
                     return 6;
-                    break;
                 case 'ô':
                     return 7;
-                    break;
                 case 'ơ':
                     return 8;
-                    break;
                 case 'u':
                     return 9;
-                    break;
                 case 'ư':
                     return 10;
-                    break;
                 case 'y':
                     return 11;
-                    break;
                 default:
                     return -1;
-                    break;
             }
         }
 
@@ -150,22 +137,16 @@ namespace TypingBC.Business
             {
                 case 22:
                     return '+';
-                    break;
                 case 36:
                     return '-';
-                    break;
                 case 38:
                     return '*';
-                    break;
                 case 50:
                     return '/';
-                    break;
                 case 54:
                     return '=';
-                    break;
                 default:
                     return '\0';
-                    break;
             }
         }
 
