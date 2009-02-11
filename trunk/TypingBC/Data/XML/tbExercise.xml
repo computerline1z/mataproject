@@ -181,7 +181,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <ID>3</ID>
       <ExSetID>2</ExSetID>
       <ExName>Bài tập gõ không dấu 1</ExName>
-      <DBFile>nomark/bai01.txt</DBFile>
+      <DBFile>Data\TXT\nomark\bai01.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
     </tbExercise>
@@ -189,7 +189,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <ID>4</ID>
       <ExSetID>2</ExSetID>
       <ExName>Bài tập gõ không dấu 2</ExName>
-      <DBFile>nomark/bai02.txt</DBFile>
+      <DBFile>Data\TXT\nomark\bai02.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
     </tbExercise>

@@ -101,6 +101,12 @@
     <Content Include="Data\TXT\Help.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\TXT\nomark\bai01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\TXT\nomark\bai02.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\TXT\tren.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
