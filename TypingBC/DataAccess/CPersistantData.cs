@@ -4,6 +4,7 @@ using System.Text;
 using TypingBC.Presentation;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 using TypingBC.Business;
 using System.Xml;
 
@@ -387,8 +388,9 @@ namespace TypingBC.DataAccess
             }
             catch (System.Exception ex)
             {
-                return null;
+                MessageBox.Show(ex.Message, "Load Practice Data");
             }
+            return null;
         }
 
         /// <summary>
