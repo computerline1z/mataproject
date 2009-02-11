@@ -34,9 +34,9 @@ namespace TypingBC.Presentation.Model
 
         #region ====================== public interface =============
 
-        public CExerciseSet[] GetExSetList()
+        public CExerciseSet[] GetExSetList(TypingMode mode)
         {
-            return CPersistantData.Instance.LoadExSetList();
+            return CPersistantData.Instance.LoadExSetList(mode);
         }
 
         public CExercise[] GetExerciseList(ExerciseSetType type)
