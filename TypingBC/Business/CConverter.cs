@@ -209,9 +209,9 @@ namespace TypingBC.Business
         {
             switch (iMode)
             {
-                case 1: return Str2VNI(sString);
-                case 2: return Str2Telex(sString);
-                case 3: return Str2NoMark(sString);
+                case 1: return Str2NoMark(sString);
+                case 2: return Str2VNI(sString);
+                case 3: return Str2Telex(sString);
             }
             return string.Empty;
         }
