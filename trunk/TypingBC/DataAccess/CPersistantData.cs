@@ -123,16 +123,22 @@ namespace TypingBC.DataAccess
         /// <summary>
         /// Đọc danh sách các ExerciseSet
         /// </summary>
+        /// <param name="mode">một giá trị <see cref="TypingMode"/> cho biết kiểu gõ.</param>
         /// <returns>Mảng các ExerciseSet đọc từ DB. Nếu có lỗi, trả về null.</returns>
-        public CExerciseSet[] LoadExSetList()
+        public CExerciseSet[] LoadExSetList(TypingMode mode)
         {
             try
             {
                 List<CExerciseSet> lsRet = new List<CExerciseSet>();
-                foreach (DataRow dtRow in m_dtExSet.Rows)
+                DataTableReader reader = m_dtExSet.CreateDataReader();
+                while(reader.Read())
                 {
-                    lsRet.Add(new CExerciseSet((ExerciseSetType)dtRow[0],
-                            (string)dtRow[1], (int)dtRow[2], (int)dtRow[3]));
+                    if(reader.GetInt32(1) == (int)mode)
+                    {
+                        lsRet.Add(new CExerciseSet((ExerciseSetType)reader.GetInt32(0),
+                                (TypingMode)reader.GetInt32(1),
+                                reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4)));
+                    }
                 }
                 return lsRet.ToArray();
             }

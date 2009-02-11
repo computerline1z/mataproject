@@ -30,6 +30,7 @@ namespace TypingBC.Presentation
     public class CExerciseSet
     {
         private ExerciseSetType m_iExSetType;
+        private TypingMode m_typingMode;
         private int m_iBeginInstruction, m_iEndInstruction;
         private string m_sName;
 
@@ -45,6 +46,12 @@ namespace TypingBC.Presentation
             set { m_iExSetType = value; }
         }
 
+        public TypingMode Mode
+        {
+            get{return m_typingMode;}
+            set{m_typingMode = value;}
+        }
+
         public int BeginInstruction
         {
             get { return m_iBeginInstruction; }
@@ -57,9 +64,10 @@ namespace TypingBC.Presentation
             set { m_iEndInstruction = value; }
         }
 
-        public CExerciseSet(ExerciseSetType type, string sName, int beginInstruction, int endInstruction)
+        public CExerciseSet(ExerciseSetType type, TypingMode mode, string sName, int beginInstruction, int endInstruction)
         {
             m_iExSetType = type;
+            m_typingMode = mode;
             m_sName = sName;
             m_iBeginInstruction = beginInstruction;
             m_iEndInstruction = endInstruction;
