@@ -95,7 +95,9 @@
     <Content Include="Data\TXT\giua.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\TXT\Help Hot Key.txt" />
+    <Content Include="Data\TXT\Help Hot Key.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Data\TXT\Help.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
