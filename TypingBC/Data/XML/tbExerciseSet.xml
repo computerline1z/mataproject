@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
-<xsd:schema>
-<xsd:element name="dataroot">
-<xsd:complexType>
-<xsd:sequence>
-<xsd:element ref="tbExerciseSet" minOccurs="0" maxOccurs="unbounded"/>
-</xsd:sequence>
-<xsd:attribute name="generated" type="xsd:dateTime"/>
-</xsd:complexType>
-</xsd:element>
-<xsd:element name="tbExerciseSet">
-<xsd:annotation>
-<xsd:appinfo>
-<od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
-<od:tableProperty name="Orientation" type="2" value="0"/>
-<od:tableProperty name="OrderByOn" type="1" value="0"/>
-<od:tableProperty name="NameMap" type="11" value="CswOVQAAAACyIuSBU3FtQpedVudLyveBAAAAAFBLhv77deNAgQIAAAAAAAB0AGIA
+  <xsd:schema>
+    <xsd:element name="dataroot">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element ref="tbExerciseSet" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="generated" type="xsd:dateTime"/>
+      </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="tbExerciseSet">
+      <xsd:annotation>
+        <xsd:appinfo>
+          <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
+          <od:tableProperty name="Orientation" type="2" value="0"/>
+          <od:tableProperty name="OrderByOn" type="1" value="0"/>
+          <od:tableProperty name="NameMap" type="11" value="CswOVQAAAACyIuSBU3FtQpedVudLyveBAAAAAFBLhv77deNAgQIAAAAAAAB0AGIA
 RQB4AGUAcgBjAGkAcwBlAFMAZQB0AAAAAAAAAJnQYocONFBKm9JgDU71TXwHAAAA
 siLkgVNxbUKXnVbnS8r3gUkARAAAAAAAAADQOZAcUbvMTp/LMXJLxF0eBwAAALIi
 5IFTcW1Cl51W50vK94FFAHgAUwBlAHQATgBhAG0AZQAAAAAAAABVVr223cr+S4V4
@@ -25,143 +25,157 @@ S8r3gUUAbgBkAEkAbgBzAHQAcgB1AGMAdABpAG8AbgAAAAAAAACje7mOUGJYQYuC
 qRhngmYYBwAAALIi5IFTcW1Cl51W50vK94FUAHkAcABpAG4AZwBNAG8AZABlAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
 "/>
-<od:tableProperty name="DefaultView" type="2" value="2"/>
-<od:tableProperty name="GUID" type="9" value="siLkgVNxbUKXnVbnS8r3gQ==
+          <od:tableProperty name="DefaultView" type="2" value="2"/>
+          <od:tableProperty name="GUID" type="9" value="siLkgVNxbUKXnVbnS8r3gQ==
 "/>
-<od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
-<od:tableProperty name="TotalsRow" type="1" value="0"/>
-<od:tableProperty name="FilterOnLoad" type="1" value="0"/>
-<od:tableProperty name="OrderByOnLoad" type="1" value="1"/>
-<od:tableProperty name="HideNewField" type="1" value="0"/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:complexType>
-<xsd:sequence>
-<xsd:element name="ID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="GUID" type="9" value="mdBihw40UEqb0mANTvVNfA==
+          <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
+          <od:tableProperty name="TotalsRow" type="1" value="0"/>
+          <od:tableProperty name="FilterOnLoad" type="1" value="0"/>
+          <od:tableProperty name="OrderByOnLoad" type="1" value="1"/>
+          <od:tableProperty name="HideNewField" type="1" value="0"/>
+        </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="ID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+            <xsd:annotation>
+              <xsd:appinfo>
+                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+                <od:fieldProperty name="Required" type="1" value="0"/>
+                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+                <od:fieldProperty name="TextAlign" type="2" value="0"/>
+                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+                <od:fieldProperty name="GUID" type="9" value="mdBihw40UEqb0mANTvVNfA==
 "/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
-<xsd:element name="TypingMode" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
-<xsd:element name="ExSetName" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="ColumnWidth" type="3" value="2100"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="IMEMode" type="2" value="0"/>
-<od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-<od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="GUID" type="9" value="0DmQHFG7zE6fyzFyS8RdHg==
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="TypingMode" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+            <xsd:annotation>
+              <xsd:appinfo>
+                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+                <od:fieldProperty name="Required" type="1" value="0"/>
+                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+                <od:fieldProperty name="TextAlign" type="2" value="0"/>
+                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="ExSetName" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
+            <xsd:annotation>
+              <xsd:appinfo>
+                <od:fieldProperty name="ColumnWidth" type="3" value="2100"/>
+                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+                <od:fieldProperty name="Required" type="1" value="0"/>
+                <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
+                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+                <od:fieldProperty name="IMEMode" type="2" value="0"/>
+                <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
+                <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
+                <od:fieldProperty name="TextAlign" type="2" value="0"/>
+                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+                <od:fieldProperty name="GUID" type="9" value="0DmQHFG7zE6fyzFyS8RdHg==
 "/>
-</xsd:appinfo>
-</xsd:annotation>
-<xsd:simpleType>
-<xsd:restriction base="xsd:string">
-<xsd:maxLength value="255"/>
-</xsd:restriction>
-</xsd:simpleType>
-</xsd:element>
-<xsd:element name="BeginInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="GUID" type="9" value="VVa9tt3K/kuFeFIN+xFBHw==
+              </xsd:appinfo>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="255"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="BeginInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+            <xsd:annotation>
+              <xsd:appinfo>
+                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+                <od:fieldProperty name="Required" type="1" value="0"/>
+                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+                <od:fieldProperty name="TextAlign" type="2" value="0"/>
+                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+                <od:fieldProperty name="GUID" type="9" value="VVa9tt3K/kuFeFIN+xFBHw==
 "/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
-<xsd:element name="EndInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-<xsd:annotation>
-<xsd:appinfo>
-<od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-<od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-<od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-<od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-<od:fieldProperty name="Required" type="1" value="0"/>
-<od:fieldProperty name="DisplayControl" type="3" value="109"/>
-<od:fieldProperty name="TextAlign" type="2" value="0"/>
-<od:fieldProperty name="AggregateType" type="4" value="-1"/>
-<od:fieldProperty name="GUID" type="9" value="0iSgoydugUK60STLRJBayw==
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="EndInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
+            <xsd:annotation>
+              <xsd:appinfo>
+                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
+                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
+                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
+                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
+                <od:fieldProperty name="Required" type="1" value="0"/>
+                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
+                <od:fieldProperty name="TextAlign" type="2" value="0"/>
+                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
+                <od:fieldProperty name="GUID" type="9" value="0iSgoydugUK60STLRJBayw==
 "/>
-</xsd:appinfo>
-</xsd:annotation>
-</xsd:element>
-</xsd:sequence>
-</xsd:complexType>
-</xsd:element>
-</xsd:schema>
-<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-11T21:00:41">
-<tbExerciseSet>
-<ID>0</ID>
-<TypingMode>0</TypingMode>
-<ExSetName>Nhận dạng bàn phím</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>1</ID>
-<TypingMode>0</TypingMode>
-<ExSetName>Tập gõ phím đơn giản</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>2</ID>
-<TypingMode>0</TypingMode>
-<ExSetName>Tập gõ tiếng Việt không dấu</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>3</ID>
-<TypingMode>0</TypingMode>
-<ExSetName>Tập gõ kiểu VNI</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-<tbExerciseSet>
-<ID>4</ID>
-<TypingMode>0</TypingMode>
-<ExSetName>Tập gõ kiểu Telex</ExSetName>
-<BeginInstruction>0</BeginInstruction>
-<EndInstruction>0</EndInstruction>
-</tbExerciseSet>
-</dataroot>
+              </xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-11T21:00:41">
+    <tbExerciseSet>
+      <ID>0</ID>
+      <TypingMode>0</TypingMode>
+      <ExSetName>Nhận dạng bàn phím</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>1</ID>
+      <TypingMode>0</TypingMode>
+      <ExSetName>Tập gõ tiếng Việt không dấu</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>2</ID>
+      <TypingMode>0</TypingMode>
+      <ExSetName>Tập gõ kiểu VNI</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>3</ID>
+      <TypingMode>0</TypingMode>
+      <ExSetName>Tập gõ kiểu Telex</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>10</ID>
+      <TypingMode>1</TypingMode>
+      <ExSetName>Nhận diện bàn phím Braille</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>11</ID>
+      <TypingMode>1</TypingMode>
+      <ExSetName>Tập gõ không dấu Braille</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+    <tbExerciseSet>
+      <ID>12</ID>
+      <TypingMode>1</TypingMode>
+      <ExSetName>Tập gõ có dấu Braille</ExSetName>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExerciseSet>
+  </dataroot>
 </root>
