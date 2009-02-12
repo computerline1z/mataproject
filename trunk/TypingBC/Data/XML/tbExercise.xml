@@ -162,7 +162,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <ExName>Nhận dạng bàn phím</ExName>
     </tbExercise>
     <tbExercise>
-      <ID>1</ID>
+      <ID>131</ID>
       <ExSetID>1</ExSetID>
       <ExName>Gõ các phím hàng giữa</ExName>
       <DBFile>Data\TXT\giua.txt</DBFile>
@@ -170,7 +170,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <EndInstruction>0</EndInstruction>
     </tbExercise>
     <tbExercise>
-      <ID>2</ID>
+      <ID>132</ID>
       <ExSetID>1</ExSetID>
       <ExName>Gõ phím hàng trên</ExName>
       <DBFile>Data\TXT\tren.txt</DBFile>
@@ -178,7 +178,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <EndInstruction>0</EndInstruction>
     </tbExercise>
     <tbExercise>
-      <ID>3</ID>
+      <ID>121</ID>
       <ExSetID>2</ExSetID>
       <ExName>Bài tập gõ không dấu 1</ExName>
       <DBFile>Data\TXT\nomark\bai01.txt</DBFile>
@@ -186,10 +186,42 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <EndInstruction>0</EndInstruction>
     </tbExercise>
     <tbExercise>
-      <ID>4</ID>
+      <ID>122</ID>
       <ExSetID>2</ExSetID>
       <ExName>Bài tập gõ không dấu 2</ExName>
       <DBFile>Data\TXT\nomark\bai02.txt</DBFile>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExercise>
+    <tbExercise>
+      <ID>210</ID>
+      <ExSetID>11</ExSetID>
+      <ExName>Anh xin loi Nomark</ExName>
+      <DBFile>Data\TXT\Nomark Braille\Anh xin loi.txt</DBFile>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExercise>
+    <tbExercise>
+      <ID>211</ID>
+      <ExSetID>11</ExSetID>
+      <ExName>Nguoi chong ly tuong Nomark</ExName>
+      <DBFile>Data\TXT\Nomark Braille\Nguoi chong ly tuong.txt</DBFile>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExercise>
+    <tbExercise>
+      <ID>220</ID>
+      <ExSetID>12</ExSetID>
+      <ExName>Anh xin loi Mark</ExName>
+      <DBFile>Data\TXT\Mark Braille\Anh xin loi.txt</DBFile>
+      <BeginInstruction>0</BeginInstruction>
+      <EndInstruction>0</EndInstruction>
+    </tbExercise>
+    <tbExercise>
+      <ID>221</ID>
+      <ExSetID>12</ExSetID>
+      <ExName>Nguoi chong ly tuong Mark</ExName>
+      <DBFile>Data\TXT\Mark Braille\Nguoi chong ly tuong.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
     </tbExercise>
