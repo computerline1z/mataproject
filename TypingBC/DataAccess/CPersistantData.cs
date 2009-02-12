@@ -196,7 +196,7 @@ namespace TypingBC.DataAccess
                 {
                     return 0;
                 }
-                return (int)arrRows[0][bBegin ? 2 : 3];
+                return (int)arrRows[0][bBegin ? 3 : 4];
             }
             catch (System.Exception /*ex*/)
             {
