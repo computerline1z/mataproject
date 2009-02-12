@@ -191,7 +191,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExSet.Select("ID = " + (int)type);
+                DataRow[] arrRows = m_dtExSet.Select("ID=" + (int)type);
                 if (arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
@@ -225,7 +225,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
+                DataRow[] arrRows = m_dtExercise.Select("ID=" + iExID);
                
                 if (arrRows != null && arrRows.Length > 0)
                 {

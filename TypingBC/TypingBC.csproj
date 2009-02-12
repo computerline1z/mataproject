@@ -101,15 +101,23 @@
     <Content Include="Data\TXT\Help.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\TXT\Mark Braille\Anh xin loi.txt" />
+    <Content Include="Data\TXT\Mark Braille\Nguoi chong ly tuong.txt" />
+    <Content Include="Data\TXT\Nomark Braille\Anh xin loi.txt" />
+    <Content Include="Data\TXT\Nomark Braille\Nguoi chong ly tuong.txt" />
     <Content Include="Data\TXT\nomark\bai01.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\TXT\nomark\bai02.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\TXT\TELEX\Anh xin loi.txt" />
+    <Content Include="Data\TXT\TELEX\Nguoi chong ly tuong.txt" />
     <Content Include="Data\TXT\tren.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\TXT\VNI\Anh xin loi.txt" />
+    <Content Include="Data\TXT\VNI\Nguoi chong ly tuong.txt" />
     <Content Include="Data\WAV\10.wav" />
     <Content Include="Data\WAV\11.wav" />
     <Content Include="Data\WAV\12.wav" />

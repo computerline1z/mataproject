@@ -18,10 +18,12 @@ namespace TypingBC.Presentation
     public enum ExerciseSetType
     {
         RECORNITION = 0,
-        SIMPLE = 1,
-        NOMARK = 2,
-        VNI = 3,
-        TELEX = 4
+        NOMARK = 1,
+        VNI = 2,
+        TELEX = 3,
+        RECORNITION_BRAILLE = 10,
+        NOMARK_BRAILLE = 11,
+        MARK_BRAILLE = 12,
     }
 
     /// <summary>
