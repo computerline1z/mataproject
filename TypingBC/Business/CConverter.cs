@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TypingBC.Presentation;
 
 namespace TypingBC.Business
 {
@@ -256,19 +257,25 @@ namespace TypingBC.Business
         /// Chuyển chuỗi Unicode sang các kiểu gõ khác với mã số của kiểu gõ
         /// </summary>
         /// <param name="sString">Chuỗi Unicode cần được chuyển</param>
-        /// <param name="iMode">Mã số kiểu gõ hiện tại
+        /// <param name="estMode">Mã số kiểu gõ hiện tại
         ///     1: VNI
         ///     2: Telex
         ///     3: NoMark
         /// </param>
         /// <returns>Chuỗi đã được chuyển</returns>
-        public static string ConvertStrWithMode(string sString, int iMode)
+        public static string ConvertStrWithMode(string sString, ExerciseSetType estExSetType)
         {
-            switch (iMode)
+            switch (estExSetType)
             {
-                case 1: return Str2NoMark(sString);
-                case 2: return Str2VNI(sString);
-                case 3: return Str2Telex(sString);
+                case ExerciseSetType.NOMARK :
+                case ExerciseSetType.NOMARK_BRAILLE:
+                    return Str2NoMark(sString);
+                case ExerciseSetType.VNI: 
+                    return Str2VNI(sString);
+                case ExerciseSetType.TELEX: 
+                    return Str2Telex(sString);
+                case ExerciseSetType.MARK_BRAILLE:
+                    return sString;
             }
             return string.Empty;
         }
