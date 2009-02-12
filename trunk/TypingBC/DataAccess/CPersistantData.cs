@@ -225,7 +225,7 @@ namespace TypingBC.DataAccess
         {
             try
             {
-                DataRow[] arrRows = m_dtExercise.Select("ID=" + iExID);
+                DataRow[] arrRows = m_dtExercise.Select("ID=" + iExID.ToString());
                
                 if (arrRows != null && arrRows.Length > 0)
                 {
