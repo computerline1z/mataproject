@@ -288,9 +288,13 @@ namespace TypingBC.Business
             char[] arrString = sString.ToCharArray();
             string finalString = "";
             for (int i = 0; i < sString.Length; i++)
-                for (int j = 0; j < m_arrUnicode.Length; j++)
-                    if (arrString[i] == m_arrUnicode[j])
-                        finalString += m_arrTCVN3[j];
+            {
+                int j = Array.IndexOf<char>(m_arrUnicodeCode, arrString[i]);
+                if (j != -1)
+                    finalString += (char)m_arrTCVN3[j];
+                else
+                    finalString += arrString[i];
+            }
             return finalString;
         }
     }
