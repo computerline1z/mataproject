@@ -94,7 +94,7 @@ namespace TypingBC.Business
             0x80, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88,
             0x89, 0x8A, 0x8B, 0x8C, 0x8E, 0x91, 0x92, 0x93,
             0x94, 0x95, 0x96, 0x97, 0x98, 0x99, 0x9A, 0x9B,
-            0x9C, 0x9E, 0x9F
+            0x9C, 0x9E, 0x9F, 0x20
         };
 
         private static readonly ushort[] m_arrUnicode =
@@ -122,7 +122,7 @@ namespace TypingBC.Business
             0x20AC, 0x20A1, 0x0192, 0x201E, 0x2026, 0x2020, 0x2021, 0x02C6,
             0x2030, 0x0160, 0x2039, 0x0152, 0x017D, 0x2018, 0x2019, 0x201C,
             0x201D, 0x2022, 0x2013, 0x2014, 0x02DC, 0x2122, 0x0161, 0x203A, 
-            0x0153, 0x017E, 0x0178
+            0x0153, 0x017E, 0x0178, 0x0020
         };
 
         #endregion
@@ -265,12 +265,12 @@ namespace TypingBC.Business
         {
             switch (estExSetType)
             {
-                case ExerciseSetType.NOMARK :
+                case ExerciseSetType.NOMARK:
                 case ExerciseSetType.NOMARK_BRAILLE:
                     return Str2NoMark(sString);
-                case ExerciseSetType.VNI: 
+                case ExerciseSetType.VNI:
                     return Str2VNI(sString);
-                case ExerciseSetType.TELEX: 
+                case ExerciseSetType.TELEX:
                     return Str2Telex(sString);
                 case ExerciseSetType.MARK_BRAILLE:
                     return sString;
@@ -288,13 +288,11 @@ namespace TypingBC.Business
             char[] arrString = sString.ToCharArray();
             string finalString = "";
             for (int i = 0; i < sString.Length; i++)
-            {
-                int j = Array.IndexOf<char>(m_arrUnicodeCode, arrString[i]);
-                if (j != -1)
-                    finalString += (char)m_arrTCVN3[j];
-                else
-                    finalString += arrString[i];
-            }
+                for (int j = 0; j < m_arrUnicode.Length; j++)
+                {
+                    if (m_arrUnicode[j] == arrString[i])
+                        finalString += (char)m_arrTCVN3[j];
+                }
             return finalString;
         }
     }
