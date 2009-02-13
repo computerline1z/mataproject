@@ -196,7 +196,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
     <tbExercise>
       <ID>210</ID>
       <ExSetID>11</ExSetID>
-      <ExName>Anh xin loi Nomark</ExName>
+      <ExName>Anh xin lỗi</ExName>
       <DBFile>Data\TXT\Nomark Braille\Anh xin loi.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
@@ -204,7 +204,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
     <tbExercise>
       <ID>211</ID>
       <ExSetID>11</ExSetID>
-      <ExName>Nguoi chong ly tuong Nomark</ExName>
+      <ExName>Người chồng lý tưởng</ExName>
       <DBFile>Data\TXT\Nomark Braille\Nguoi chong ly tuong.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
@@ -212,7 +212,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
     <tbExercise>
       <ID>220</ID>
       <ExSetID>12</ExSetID>
-      <ExName>Anh xin loi Mark</ExName>
+      <ExName>Anh xin lỗi</ExName>
       <DBFile>Data\TXT\Mark Braille\Anh xin loi.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
@@ -220,7 +220,7 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
     <tbExercise>
       <ID>221</ID>
       <ExSetID>12</ExSetID>
-      <ExName>Nguoi chong ly tuong Mark</ExName>
+      <ExName>Người chồng lý tưởng</ExName>
       <DBFile>Data\TXT\Mark Braille\Nguoi chong ly tuong.txt</DBFile>
       <BeginInstruction>0</BeginInstruction>
       <EndInstruction>0</EndInstruction>
