@@ -27,6 +27,7 @@ namespace TypingBC.DataAccess
         private DataTable m_dtUser;
         private DataTable m_dtPracticeData;
         private DataTable m_dtSpeech;
+        private DataTable m_dtConfig;
         private Dictionary<string, DataSet> m_lsDataSets = new Dictionary<string, DataSet>();
 
         private static CPersistantData m_Instance = null;
@@ -64,6 +65,10 @@ namespace TypingBC.DataAccess
 
         protected CPersistantData()
         {
+            m_dtConfig = ReadDataFile(TABLEFILE_CONFIG);
+            m_dtConfig.CaseSensitive = false;
+            m_dtConfig.PrimaryKey = new DataColumn[] { m_dtConfig.Columns[0] };
+
             m_dtUser = ReadDataFile(TABLEFILE_USER);
             m_dtUser.CaseSensitive = false;
             m_dtUser.PrimaryKey = new DataColumn[] { m_dtUser.Columns[0] };
@@ -295,13 +300,34 @@ namespace TypingBC.DataAccess
 
         public int LoadConfig()
         {
-            //TODO: load len blind time
+            try
+            {
+                if (m_dtConfig.Rows.Count > 0)
+                {
+                    return (int)m_dtConfig.Rows[0]["BlindRepeatTime"];
+                }
+            }
+            catch 
+            {
+                System.Diagnostics.Debug.WriteLine("Error in CPersistantData.LoadConfig");
+            }
             return 1;
         }
 
-        public void SaveConfig(int BlindRepeatTime)
+        public void SaveConfig(int iBlindRepeatTime)
         {
-            //TODO: save lai config
+            try
+            {
+                if (m_dtConfig.Rows.Count > 0)
+                {
+                    m_dtConfig.Rows[0]["BlindRepeatTime"] = iBlindRepeatTime;
+                    m_dtConfig.AcceptChanges();
+                }
+            }
+            catch
+            {
+                System.Diagnostics.Debug.WriteLine("Error in CPersistantData.SaveConfig");
+            }
         }
 
         public bool UpdatePracData(CPracticeData data)
