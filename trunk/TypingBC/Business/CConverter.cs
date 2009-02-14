@@ -12,7 +12,7 @@ namespace TypingBC.Business
     public static class CConverter
     {
         #region CodeTable
-        private static readonly int m_iTableAmount = 60 - 3;    // số phần tử trong bảng ánh xạ các kiểu gõ
+        private static readonly int m_iTableAmount = 70 - 3;    // số phần tử trong bảng ánh xạ các kiểu gõ
         // các bảng dùng để ánh xạ các kiểu gõ
         private static readonly char[] m_arrUnicodeCode = 
         {
@@ -25,7 +25,9 @@ namespace TypingBC.Business
             'ơ','ớ','ờ','ở','ỡ','ợ',
             'ô','ố','ồ','ổ','ỗ','ộ',
                 'ú','ù','ủ','õ','ụ',
-            'ư','ứ','ừ','ử','ữ','ự'
+            'ư','ứ','ừ','ử','ữ','ự',
+                'í','ì','ỉ','ĩ','ị',
+                'ý','ỳ','ỷ','ỹ','ỵ'
         };
 
         private static readonly string[] m_arrVNICode = 
@@ -39,7 +41,9 @@ namespace TypingBC.Business
             "o7","o71","o72","o73","o74","o75",
             "o6","o61","o62","o63","o64","o65",
                 "u1","u2","u3","u4","u5",
-            "u7","u71","u72","u73","u74","u75"
+            "u7","u71","u72","u73","u74","u75",
+                "i1","i2","i3","i4","i5",
+                "y1","y2","y3","y4","y5"
         };
 
         private static readonly string[] m_arrTelexCode = 
@@ -53,7 +57,9 @@ namespace TypingBC.Business
             "ow","ows","owf","owr","owx","owj",
             "oo","oos","oof","oor","oox","ooj",
                 "us","uf","ur","ux","uj",
-            "uw","uws","uwf","uwr","uwx","uwj"
+            "uw","uws","uwf","uwr","uwx","uwj",
+                "is","if","ir","ix","ij",
+                "ys","yf","yr","yx","yj"
         };
 
         private static readonly string[] m_arrNoMarkCode = 
@@ -67,7 +73,9 @@ namespace TypingBC.Business
             "o","o","o","o","o","o",
             "o","o","o","o","o","o",
                 "u","u","u","u","u",
-            "u","u","u","u","u","u"
+            "u","u","u","u","u","u",
+                "i","i","i","i","i",
+                "y","y","y","y","y"
         };
 
         private static readonly byte[] m_arrTCVN3 =
