@@ -346,7 +346,18 @@ namespace TypingBC.Business
                 for (int j = 0; j < m_arrVNI.Length; j++)
                 {
                     if (m_arrUnicode[j] == arrString[i])
-                        finalString += (char)m_arrTCVN3[j];
+                    {
+                        ushort temp = m_arrVNI[j];
+                        if(temp < 256)
+                        {
+                            finalString += (char)temp;
+                        }
+                        else
+                        {
+                            finalString += (char)(temp & 0x00ff);
+                            finalString += (char)(temp >> 8);
+                        }
+                    }
                 }
             return finalString;
         }
