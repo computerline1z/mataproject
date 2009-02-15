@@ -20,6 +20,8 @@ namespace TypingBC.Business
         private bool m_bMath;
         //báo dấu
         private int m_iMark;
+        //
+        private char[] m_arrKeys = { 'f', 'd', 's', 'j', 'k', 'l' };
 
 
         //dựa trên bảng mã Việt ngữ của mái ấm Thiên Ân, thay chữ d = đ và z = d
@@ -150,6 +152,16 @@ namespace TypingBC.Business
             }
         }
 
+        private string BrailleKeys(int pos)
+        {
+            string keys = "";
+            int value = m_arrIndex[pos];
+            for (int i = 0; i < 6; i++)
+                if (((value >> i) & 0x1) == 1)
+                    keys += m_arrKeys[i];
+            return keys + "_";
+        }
+
         #endregion
 
         /// <summary>
@@ -163,6 +175,7 @@ namespace TypingBC.Business
                 return;
             for (int i = 0; i < 5; i++)
             {
+                m_arrKeys[i] = arrKeys[i];
                 if (m_arrBrailleKeys.ContainsKey(arrKeys[i]))
                     m_arrBrailleKeys[arrKeys[i]] = i + 1;
                 else
@@ -188,7 +201,10 @@ namespace TypingBC.Business
                 return result;
             }
 
-            //nếu 6 phím truyền vào khác 6 phím đã đăng ký sẽ sai
+            //nếu 6 phím truyền vào khác 6 phím đã đăng ký sẽ ko xử lý
+            foreach (char c in arrKeyPressed)
+                if(Array.IndexOf<char>(m_arrKeys,c) == -1)
+                    return '\0';
             //biểu diễn các chấm vào các bit
             foreach (char c in arrKeyPressed)
             {
@@ -240,6 +256,25 @@ namespace TypingBC.Business
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// chuyển chuỗi sang cách gõ theo Braille
+        /// </summary>
+        /// <param name="text">chuỗi cần chuyển</param>
+        /// <returns>cách gõ</returns>
+        public string Str2Braille(string text)
+        {
+            string result = "";
+            foreach (char c in text)
+            {
+                int pos = Array.IndexOf<char>(m_arrAlphabet, c);
+                if (pos == -1)
+                    result += " _";
+                else
+                    result += BrailleKeys(pos);
+            }
+            return result.TrimEnd('_');
         }
 
         public CBrailleMode()
