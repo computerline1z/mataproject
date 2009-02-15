@@ -193,8 +193,71 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
     </tbSpeech>
     <tbSpeech>
       <ID>51</ID>
-      <HelpString></HelpString>
+      <HelpString>Phím F1: giới thiệu sơ lược chương trình.</HelpString>
       <WavFile>Data\WAV\51.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>52</ID>
+      <HelpString>Phím F2: Dưới đây là hệ thống các phím tắt hỗ trợ người dùng.
+
+        Phím Ctrl + Khoảng trắng: focus lại chương trình.
+
+        Phím F1: giới thiệu sơ lược chương trình.
+
+        Phím F2: hướng dẫn sử dụng hệ thống các phím nóng (hay Hot Key) cho người dùng.
+
+        Phím F3: chuyển đổi giao diện qua lại để hỗ trợ cho người dùng có thể thấy chữ và người dùng không thể thấy chữ.
+
+        Phím F4: hướng dẫn cách gõ từ đang gõ. Sử dụng khi bạn không biết hoặc quên mất cách gõ.
+
+        Phím F5: bỏ qua hướng dẫn đang đọc.
+
+        Phím F9: giảm thời gian chờ giữa các phím gõ Braille xuống 10 mili giây.
+
+        Phím F10: tăng thời gian chờ giữa các phím gõ Braille lên 10 mili giây.
+
+        Phím F11: giảm kích cỡ font chữ trên ứng dụng.
+
+        Phím F12: tăng kích cỡ font chữ trên ứng dụng.
+      </HelpString>
+      <WavFile>Data\WAV\52.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>53</ID>
+      <HelpString>Phím F3: chuyển đổi giao diện qua lại để hỗ trợ cho người dùng có thể thấy chữ và người dùng không thể thấy chữ.</HelpString>
+      <WavFile>Data\WAV\53.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>54</ID>
+      <HelpString>Phím F4: hướng dẫn cách gõ từ đang gõ. Sử dụng khi bạn không biết hoặc quên mất cách gõ.</HelpString>
+      <WavFile>Data\WAV\54.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>55</ID>
+      <HelpString>Phím F5: bỏ qua hướng dẫn đang đọc.</HelpString>
+      <WavFile>Data\WAV\55.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>59</ID>
+      <HelpString>Phím F9: giảm thời gian chờ giữa các phím gõ Braille xuống 10 mili giây.
+      </HelpString>
+      <WavFile>Data\WAV\59.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>510</ID>
+      <HelpString>Phím F10: tăng thời gian chờ giữa các phím gõ Braille lên 10 mili giây.
+      </HelpString>
+      <WavFile>Data\WAV\510.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>511</ID>
+      <HelpString>Phím F11: giảm kích cỡ font chữ trên ứng dụng.</HelpString>
+      <WavFile>Data\WAV\511.wav</WavFile>
+    </tbSpeech>
+    <tbSpeech>
+      <ID>512</ID>
+      <HelpString>Phím F12: tăng kích cỡ font chữ trên ứng dụng.</HelpString>
+      <WavFile>Data\WAV\512.wav</WavFile>
     </tbSpeech>
     
   </dataroot>
