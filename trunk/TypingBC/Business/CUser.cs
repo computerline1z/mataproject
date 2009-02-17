@@ -29,7 +29,7 @@ namespace TypingBC.Business
 
         public bool AddUser(string sUserName)
         {
-            if(!IsUserExisted(sUserName))
+            if (!IsUserExisted(sUserName))
             {
                 //TODO: add vào Database
                 return CPersistantData.Instance.AddUser(sUserName);
@@ -50,6 +50,11 @@ namespace TypingBC.Business
         public int GetUsingExercise(string sUserName)
         {
             return CPersistantData.Instance.LoadUsingExID(sUserName);
+        }
+
+        public ExerciseSetType GetUsingExerciseSet(string sUserName)
+        {
+            return CPersistantData.Instance.LoadUsingExSetID(sUserName);
         }
 
         public bool SetUsingExercise(string sUserName, int iUsing)

@@ -59,7 +59,7 @@ namespace TypingBC.DataAccess
                 {
                     m_Instance = new CPersistantData();
                 }
-                return m_Instance;  
+                return m_Instance;
             }
         }
 
@@ -110,7 +110,7 @@ namespace TypingBC.DataAccess
         {
             string sPath = CurrentPath;
 
-            foreach(string sKeys in m_lsDataSets.Keys)
+            foreach (string sKeys in m_lsDataSets.Keys)
             {
                 m_lsDataSets[sKeys].WriteXml(sKeys, XmlWriteMode.WriteSchema);
             }
@@ -136,9 +136,9 @@ namespace TypingBC.DataAccess
             {
                 List<CExerciseSet> lsRet = new List<CExerciseSet>();
                 DataTableReader reader = m_dtExSet.CreateDataReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
-                    if(reader.GetInt32(1) == (int)mode)
+                    if (reader.GetInt32(1) == (int)mode)
                     {
                         lsRet.Add(new CExerciseSet((ExerciseSetType)reader.GetInt32(0),
                                 (TypingMode)reader.GetInt32(1),
@@ -214,7 +214,7 @@ namespace TypingBC.DataAccess
             try
             {
                 DataRow[] arrRows = m_dtExercise.Select("ID = " + iExID);
-                if(arrRows == null || arrRows.Length == 0)
+                if (arrRows == null || arrRows.Length == 0)
                 {
                     return 0;
                 }
@@ -231,7 +231,7 @@ namespace TypingBC.DataAccess
             try
             {
                 DataRow[] arrRows = m_dtExercise.Select("ID=" + iExID.ToString());
-               
+
                 if (arrRows != null && arrRows.Length > 0)
                 {
                     CExercise ex = new CExercise();
@@ -254,7 +254,7 @@ namespace TypingBC.DataAccess
                     return ex;
                 }
             }
-            catch{}
+            catch { }
             return null;
         }
 
@@ -276,7 +276,7 @@ namespace TypingBC.DataAccess
                 }
                 return lsRet.ToArray();
             }
-            catch{}
+            catch { }
             return null;
         }
 
@@ -307,7 +307,7 @@ namespace TypingBC.DataAccess
                     return (int)m_dtConfig.Rows[0]["BlindRepeatTime"];
                 }
             }
-            catch 
+            catch
             {
                 System.Diagnostics.Debug.WriteLine("Error in CPersistantData.LoadConfig");
             }
@@ -394,6 +394,17 @@ namespace TypingBC.DataAccess
             return -1;
         }
 
+        public ExerciseSetType LoadUsingExSetID(string UserName)
+        {
+            int i = LoadUsingExID(UserName);
+            DataRow[] arrData = m_dtExercise.Select("ID = " + i.ToString());
+            if (arrData.Length > 0)
+            {
+                return (ExerciseSetType)arrData[0][1];
+            }
+            return ExerciseSetType.RECORNITION;
+        }
+
         public CPracticeData[] LoadPracData(string UserName)
         {
             try
@@ -436,7 +447,7 @@ namespace TypingBC.DataAccess
         public string GetSpeechEntry(int iStringID, bool getWavFile)
         {
             DataRow[] arrRows = m_dtSpeech.Select("ID = " + iStringID);
-            if(arrRows.Length > 0)
+            if (arrRows.Length > 0)
             {
                 return arrRows[0][getWavFile ? 2 : 1].ToString();
             }
