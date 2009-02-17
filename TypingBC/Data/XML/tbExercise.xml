@@ -159,7 +159,12 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
     <tbExercise>
       <ID>-1</ID>
       <ExSetID>0</ExSetID>
-      <ExName>Nhận dạng bàn phím</ExName>
+      <ExName>Nhận dạng bàn phím Bình thường</ExName>
+    </tbExercise>
+    <tbExercise>
+      <ID>-2</ID>
+      <ExSetID>10</ExSetID>
+      <ExName>Nhận dạng bàn phím Braille</ExName>
     </tbExercise>
     <tbExercise>
       <ID>120</ID>
