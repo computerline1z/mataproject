@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
   <xsd:schema>
     <xsd:element name="dataroot">
@@ -120,13 +120,13 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
       <ID>201</ID>
       <HelpString>Đối với chế độ gõ Bình Thường, có 4 hệ thống bài tập:
 
-        1. Nhận diện bàn phím: loại bài tập này giúp các bạn xác định kí tự ứng với một vị trí trên bàn phím.
+        1. Nhận diện bàn phím: loại bài tập này giúp bạn xác định kí tự ứng với một vị trí trên bàn phím.
 
-        2. Gõ không dấu: loại bài tập này giúp các bạn luyện tập gõ các kí tự không dấu, các từ không dấu từ dễ đến khó.
+        2. Gõ không dấu: loại bài tập này giúp bạn luyện tập gõ các kí tự không dấu, các từ không dấu từ dễ đến khó.
 
-        3. Gõ có dấu kiểu VNI: loại bài tập này giúp các bạn tập gõ một đoạn văn hoặc một bài thơ có dấu với các phím gõ dấu từ 1 đến 9.
+        3. Gõ có dấu kiểu VNI: loại bài tập này giúp bạn tập gõ một đoạn văn hoặc một bài thơ có dấu với các phím gõ dấu từ 1 đến 9.
 
-        4. Gõ có dấu kiểu Telex: loại bài tập này giúp các bạn tập gõ một đoạn văn hoặc một bài thơ có dấu dùng các phím s f r x j tương ứng với các dấu sắc, huyền, hỏi, ngã, nặng. Ngoài ra còn sử dụng các phím khác sẽ hướng dẫn trong bài.
+        4. Gõ có dấu kiểu Telex: loại bài tập này giúp bạn tập gõ một đoạn văn hoặc một bài thơ có dấu dùng các phím s f r x j tương ứng với các dấu sắc, huyền, hỏi, ngã, nặng. Ngoài ra còn sử dụng các phím khác sẽ hướng dẫn trong bài.
       </HelpString>
       <WavFile>Data\WAV\201.wav</WavFile>
     </tbSpeech>
@@ -154,11 +154,11 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
       <ID>202</ID>
       <HelpString>Đối với chế độ gõ Braille sử dụng 6 phím, có 3 hệ thống bài tập:
 
-        1. Nhận diện bàn phím: loại bài tập này giúp các bạn xác định các phím đã chọn dùng để gõ.
+        1. Nhận diện bàn phím: giúp bạn xác định các phím đã chọn dùng để gõ.
 
-        2. Gõ không dấu Braille: loại bài tập này giúp các bạn tập gõ một đoạn văn hoặc một đoạn thơ không dấu sử dụng 6 Braille.
+        2. Gõ không dấu Braille: giúp bạn tập gõ một đoạn văn hoặc một đoạn thơ không dấu sử dụng 6 Braille.
 
-        3. Gõ có dấu Braille: loại bài tập này giúp các bạn tập gõ một đoạn văn hoặc một đoạn thơ có dấu sử dụng 6 Braille.</HelpString>
+        3. Gõ có dấu Braille: giúp bạn tập gõ một đoạn văn hoặc một đoạn thơ có dấu sử dụng 6 Braille.</HelpString>
       <WavFile>Data\WAV\202.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
@@ -206,7 +206,7 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
 
         Phím F2: hướng dẫn sử dụng hệ thống các phím nóng (hay Hot Key) cho người dùng.
 
-        Phím F3: chuyển đổi giao diện qua lại để hỗ trợ cho người dùng có thể thấy chữ và người dùng không thể thấy chữ.
+        Phím F3: chuyển đổi giao diện qua lại để hỗ trợ cho người bình thường và người khiếm thị.
 
         Phím F4: hướng dẫn cách gõ từ đang gõ. Sử dụng khi bạn không biết hoặc quên mất cách gõ.
 
