@@ -104,17 +104,17 @@ AAAAAAAADAAAAAQAAAAAAAAAAAAAAAAAAAAAAA==
         Chế độ gõ bình thường sẽ sử dụng tất cả các bàn phím để gõ.
 
         Chế độ gõ Braille chỉ sử dụng 6 phím là A S D và J K L để gõ, các phím khác sẽ không nhận được (ngoại trừ phím Esc để dừng làm bài tập).</HelpString>
-      <WavFile>..\..\Data\WAV\10.wav</WavFile>
+      <WavFile>.\Data\WAV\10.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>11</ID>
       <HelpString>Chế độ gõ Bình Thường</HelpString>
-      <WavFile>..\..\Data\WAV\11.wav</WavFile>
+      <WavFile>.\Data\WAV\11.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>12</ID>
       <HelpString>Chế độ gõ 6 phím Braille.</HelpString>
-      <WavFile>..\..\Data\WAV\12.wav</WavFile>
+      <WavFile>.\Data\WAV\12.wav</WavFile>
     </tbSpeech>
     <tbSpeech>
       <ID>201</ID>
