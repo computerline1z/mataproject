@@ -1,161 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<root xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:od="urn:schemas-microsoft-com:officedata">
-  <xsd:schema>
-    <xsd:element name="dataroot">
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element ref="tbExercise" minOccurs="0" maxOccurs="unbounded"/>
-        </xsd:sequence>
-        <xsd:attribute name="generated" type="xsd:dateTime"/>
-      </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="tbExercise">
-      <xsd:annotation>
-        <xsd:appinfo>
-          <od:index index-name="PrimaryKey" index-key="ID " primary="yes" unique="yes" clustered="no" order="asc"/>
-          <od:index index-name="tbExerciseSettbExercise" index-key="ExSetID " primary="no" unique="no" clustered="no" order="asc"/>
-          <od:tableProperty name="Orientation" type="2" value="0"/>
-          <od:tableProperty name="OrderByOn" type="1" value="1"/>
-          <od:tableProperty name="NameMap" type="11" value="CswOVQAAAAC6qoUy/ahHSqBHgH/djeYKAAAAAIyu0R2VdONAAOBkBQEAAAB0AGIA
-RQB4AGUAcgBjAGkAcwBlAAAAAAAAABPewDp8Ie5CjGR1NqCdEyAHAAAAuqqFMv2o
-R0qgR4B/3Y3mCkkARAAAAAAAAAD+s8ol/pWmT689FTgGRxkjBwAAALqqhTL9qEdK
-oEeAf92N5gpFAHgAUwBlAHQASQBEAAAAAAAAAFEnRwR+k+FHmwaDNpS73wAHAAAA
-uqqFMv2oR0qgR4B/3Y3mCkUAeABOAGEAbQBlAAAAAAAAAALhrJpbZIVLna/DcyPG
-RYsHAAAAuqqFMv2oR0qgR4B/3Y3mCkQAQgBGAGkAbABlAAAAAAAAABQ5novsA0BH
-qHQrUQ60fC4HAAAAuqqFMv2oR0qgR4B/3Y3mCkIAZQBnAGkAbgBJAG4AcwB0AHIA
-dQBjAHQAaQBvAG4AAAAAAAAA2sgGaCptKU6ltJhFXXI1mwcAAAC6qoUy/ahHSqBH
-gH/djeYKRQBuAGQASQBuAHMAdAByAHUAYwB0AGkAbwBuAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
-"/>
-          <od:tableProperty name="DefaultView" type="2" value="2"/>
-          <od:tableProperty name="GUID" type="9" value="uqqFMv2oR0qgR4B/3Y3mCg==
-"/>
-          <od:tableProperty name="DisplayViewsOnSharePointSite" type="2" value="1"/>
-          <od:tableProperty name="TotalsRow" type="1" value="0"/>
-          <od:tableProperty name="FilterOnLoad" type="1" value="0"/>
-          <od:tableProperty name="OrderByOnLoad" type="1" value="1"/>
-          <od:tableProperty name="HideNewField" type="1" value="0"/>
-          <od:tableProperty name="OrderBy" type="12" value="[tbExercise].[ID]"/>
-        </xsd:appinfo>
-      </xsd:annotation>
-      <xsd:complexType>
-        <xsd:sequence>
-          <xsd:element name="ID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="ExSetID" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-                <od:fieldProperty name="GUID" type="9" value="/rPKJf6Vpk+vPRU4BkcZIw==
-"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="ExName" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="2265"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="IMEMode" type="2" value="0"/>
-                <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-                <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-                <od:fieldProperty name="GUID" type="9" value="USdHBH6T4UebBoM2lLvfAA==
-"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-            <xsd:simpleType>
-              <xsd:restriction base="xsd:string">
-                <xsd:maxLength value="255"/>
-              </xsd:restriction>
-            </xsd:simpleType>
-          </xsd:element>
-          <xsd:element name="DBFile" minOccurs="0" od:jetType="text" od:sqlSType="nvarchar">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="Description" type="10" value="tên text file chứa các string."/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="AllowZeroLength" type="1" value="1"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="IMEMode" type="2" value="0"/>
-                <od:fieldProperty name="IMESentenceMode" type="2" value="3"/>
-                <od:fieldProperty name="UnicodeCompression" type="1" value="1"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-                <od:fieldProperty name="GUID" type="9" value="AuGsmltkhUudr8NzI8ZFiw==
-"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-            <xsd:simpleType>
-              <xsd:restriction base="xsd:string">
-                <xsd:maxLength value="255"/>
-              </xsd:restriction>
-            </xsd:simpleType>
-          </xsd:element>
-          <xsd:element name="BeginInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-                <od:fieldProperty name="GUID" type="9" value="FDmei+wDQEeodCtRDrR8Lg==
-"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="EndInstruction" minOccurs="0" od:jetType="longinteger" od:sqlSType="int" type="xsd:int">
-            <xsd:annotation>
-              <xsd:appinfo>
-                <od:fieldProperty name="ColumnWidth" type="3" value="-1"/>
-                <od:fieldProperty name="ColumnOrder" type="3" value="0"/>
-                <od:fieldProperty name="ColumnHidden" type="1" value="0"/>
-                <od:fieldProperty name="DecimalPlaces" type="2" value="255"/>
-                <od:fieldProperty name="Required" type="1" value="0"/>
-                <od:fieldProperty name="DisplayControl" type="3" value="109"/>
-                <od:fieldProperty name="TextAlign" type="2" value="0"/>
-                <od:fieldProperty name="AggregateType" type="4" value="-1"/>
-                <od:fieldProperty name="GUID" type="9" value="2sgGaCptKU6ltJhFXXI1mw==
-"/>
-              </xsd:appinfo>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:complexType>
-    </xsd:element>
-  </xsd:schema>
-  <dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generated="2009-02-10T00:02:42">
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="dataroot">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="tbExercise" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ID" type="xs:int" minOccurs="0" />
+                <xs:element name="ExSetID" type="xs:int" minOccurs="0" />
+                <xs:element name="ExName" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="DBFile" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="255" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="BeginInstruction" type="xs:int" minOccurs="0" />
+                <xs:element name="EndInstruction" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="generated" type="xs:dateTime" />
+      </xs:complexType>
+    </xs:element>
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="dataroot" />
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <dataroot generated="2009-02-10T00:02:42+07:00">
     <tbExercise>
       <ID>-1</ID>
       <ExSetID>0</ExSetID>
@@ -231,4 +116,428 @@ AAAAAAAAAAAMAAAABAAAAAAAAAAAAAAAAAAAAAAA
       <EndInstruction>0</EndInstruction>
     </tbExercise>
   </dataroot>
-</root>
+  <tbExercise>
+    <ID>0</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 4 Phần 2</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 4 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>1</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 4</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 4.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>2</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 6 Phần 2</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 6 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>3</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 6</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 6.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>4</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 7 Phần 2</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 7 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>5</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Luyện Tập 7</ExName>
+    <DBFile>Data\TXT\3\BàiLuyệnTập 7.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>6</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 10</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 10.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>7</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 11</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 11.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>8</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 12</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 12.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>9</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 13</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 13.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>10</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 14</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 14.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>11</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 15</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 15.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>12</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 16</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 16.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>13</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 5</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 5.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>14</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 6</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 6.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>15</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 7</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 7.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>16</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 8</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 8.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>17</ID>
+    <ExSetID>3</ExSetID>
+    <ExName> Bài Thực Hành 9</ExName>
+    <DBFile>Data\TXT\3\BàiThựcHành 9.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>18</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 4 Phần 2</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 4 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>19</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 4</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 4.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>20</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 6 Phần 2</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 6 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>21</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 6</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 6.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>22</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 7 Phần 2</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 7 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>23</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Luyện Tập 7</ExName>
+    <DBFile>Data\TXT\2\BàiLuyệnTập 7.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>24</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 10</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 10.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>25</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 11</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 11.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>26</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 12</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 12.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>27</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 13</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 13.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>28</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 14</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 14.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>29</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 15</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 15.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>30</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 16</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 16.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>31</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 5</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 5.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>32</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 6</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 6.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>33</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 7</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 7.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>34</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 8</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 8.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>35</ID>
+    <ExSetID>2</ExSetID>
+    <ExName> Bài Thực Hành 9</ExName>
+    <DBFile>Data\TXT\2\BàiThựcHành 9.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>36</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>;lkjh</ExName>
+    <DBFile>Data\TXT\1\;lkjh.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>37</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>asdfg</ExName>
+    <DBFile>Data\TXT\1\asdfg.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>38</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Luyện Tập 5 Phần 2</ExName>
+    <DBFile>Data\TXT\1\BàiLuyệnTập 5 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>39</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Luyện Tập 5</ExName>
+    <DBFile>Data\TXT\1\BàiLuyệnTập 5.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>40</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Luyện Tập Số 3</ExName>
+    <DBFile>Data\TXT\1\BàiLuyệnTậpSố 3.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>41</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Thực Hành 1</ExName>
+    <DBFile>Data\TXT\1\BàiThựcHành 1.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>42</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Thực Hành 2</ExName>
+    <DBFile>Data\TXT\1\BàiThựcHành 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>43</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Thực Hành 3</ExName>
+    <DBFile>Data\TXT\1\BàiThựcHành 3.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>44</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Bài Thực Hành 4</ExName>
+    <DBFile>Data\TXT\1\BàiThựcHành 4.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>45</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Luyện Tập Bài 2 Phần 2</ExName>
+    <DBFile>Data\TXT\1\LuyệnTậpBài 2 Phần 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>46</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Luyện Tập Bài 2</ExName>
+    <DBFile>Data\TXT\1\LuyệnTậpBài 2.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>47</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Luyện Tập Hàng Cơ Bản</ExName>
+    <DBFile>Data\TXT\1\LuyệnTậpHàngCơBản.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>48</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>nm</ExName>
+    <DBFile>Data\TXT\1\nm.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>49</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>poiuy</ExName>
+    <DBFile>Data\TXT\1\poiuy.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>50</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>qwert</ExName>
+    <DBFile>Data\TXT\1\qwert.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>51</ID>
+    <ExSetID>1</ExSetID>
+    <ExName> Tập Gõ Hàng Cơ Bản</ExName>
+    <DBFile>Data\TXT\1\TậpGõHàngCơBản.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+  <tbExercise>
+    <ID>52</ID>
+    <ExSetID>1</ExSetID>
+    <ExName>zxcvb</ExName>
+    <DBFile>Data\TXT\1\zxcvb.txt</DBFile>
+    <BeginInstruction>0</BeginInstruction>
+    <EndInstruction>0</EndInstruction>
+  </tbExercise>
+</NewDataSet>
